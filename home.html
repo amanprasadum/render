@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premier Render Solutions - Professional Rendering Services Sydney</title>
-    <meta name="description" content="Premier Render Solutions offers professional cement rendering, acrylic rendering, concrete rendering, and texture coating services across all Sydney regions. Free quotes available.">
-    <meta name="keywords" content="cement rendering Sydney, acrylic rendering, concrete rendering, texture coating, rendering repairs, Campbelltown">
-    
+    <meta name="description"
+        content="Premier Render Solutions offers professional cement rendering, acrylic rendering, concrete rendering, and texture coating services across all Sydney regions. Free quotes available.">
+    <meta name="keywords"
+        content="cement rendering Sydney, acrylic rendering, concrete rendering, texture coating, rendering repairs, Campbelltown">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         /* Custom Variables for Color Scheme */
         :root {
@@ -24,107 +27,107 @@
             --dark-gray: #6c757d;
             --success-color: #27ae60;
         }
-        
+
         /* Base Typography */
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--accent-color);
         }
-        
+
         /* Top Social Bar Styles */
         .social-top-bar {
             background-color: var(--primary-color);
             color: white;
             font-size: 0.875rem;
         }
-        
+
         .social-top-bar a {
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .social-top-bar a:hover {
             color: var(--secondary-color);
         }
-        
+
         /* Header/Logo Section Styles */
         .header-main {
             background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-color);
         }
-        
+
         .contact-info {
             color: var(--dark-gray);
             font-size: 0.9rem;
         }
-        
+
         .contact-info i {
             color: var(--secondary-color);
             margin-right: 0.5rem;
         }
-        
+
         /* Navigation Styles */
         .navbar-custom {
             background-color: var(--accent-color) !important;
             padding: 0.75rem 0;
         }
-        
+
         .navbar-custom .navbar-nav .nav-link {
             color: white !important;
             font-weight: 500;
             padding: 0.75rem 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .navbar-custom .navbar-nav .nav-link:hover,
         .navbar-custom .navbar-nav .nav-link:focus {
             color: var(--secondary-color) !important;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
         }
-        
+
         .navbar-custom .dropdown-menu {
             background-color: var(--accent-color);
             border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         .navbar-custom .dropdown-item {
             color: white;
             transition: all 0.3s ease;
         }
-        
+
         .navbar-custom .dropdown-item:hover {
             background-color: var(--primary-color);
             color: white;
         }
-        
+
         /* Hero Section Styles */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
             color: white;
             padding: 4rem 0;
         }
-        
+
         .hero-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
         }
-        
+
         .hero-subtitle {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
-        
+
         .btn-primary-custom {
             background-color: var(--secondary-color);
             border-color: var(--secondary-color);
@@ -134,13 +137,13 @@
             border-radius: 0.5rem;
             transition: all 0.3s ease;
         }
-        
+
         .btn-primary-custom:hover {
             background-color: #e67e22;
             border-color: #e67e22;
             transform: translateY(-2px);
         }
-        
+
         .btn-outline-custom {
             border-color: white;
             color: white;
@@ -149,18 +152,18 @@
             border-radius: 0.5rem;
             transition: all 0.3s ease;
         }
-        
+
         .btn-outline-custom:hover {
             background-color: white;
             color: var(--primary-color);
         }
-        
+
         /* Services Section Styles */
         .services-section {
             padding: 4rem 0;
             background-color: var(--light-gray);
         }
-        
+
         .section-title {
             font-size: 2.25rem;
             font-weight: 700;
@@ -168,48 +171,48 @@
             margin-bottom: 1rem;
             text-align: center;
         }
-        
+
         .section-subtitle {
             color: var(--dark-gray);
             text-align: center;
             margin-bottom: 3rem;
             font-size: 1.1rem;
         }
-        
+
         .service-card {
             background: white;
             border-radius: 0.75rem;
             padding: 2rem;
             height: 100%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: none;
         }
-        
+
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         .service-icon {
             font-size: 2.5rem;
             color: var(--secondary-color);
             margin-bottom: 1.5rem;
         }
-        
+
         .service-title {
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         .service-description {
             color: var(--dark-gray);
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
         }
-        
+
         .read-more-btn {
             color: var(--primary-color);
             font-weight: 500;
@@ -218,82 +221,82 @@
             align-items: center;
             transition: all 0.3s ease;
         }
-        
+
         .read-more-btn:hover {
             color: var(--secondary-color);
             text-decoration: none;
         }
-        
+
         .read-more-btn i {
             margin-left: 0.5rem;
             transition: transform 0.3s ease;
         }
-        
+
         .read-more-btn:hover i {
             transform: translateX(3px);
         }
-        
+
         /* About Section Styles */
         .about-section {
             padding: 4rem 0;
             background-color: white;
         }
-        
+
         .about-text {
             font-size: 1.1rem;
             color: var(--dark-gray);
             margin-bottom: 2rem;
         }
-        
+
         .feature-list {
             list-style: none;
             padding: 0;
         }
-        
+
         .feature-list li {
             color: var(--dark-gray);
             margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
         }
-        
+
         .feature-list li i {
             color: var(--success-color);
             margin-right: 0.75rem;
             font-size: 1.1rem;
         }
-        
+
         /* Gallery Section Styles */
         .gallery-section {
             padding: 4rem 0;
             background-color: var(--light-gray);
         }
-        
+
         .gallery-item {
             margin-bottom: 2rem;
             border-radius: 0.75rem;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
-        
+
         /* Testimonials Section Styles */
         .testimonials-section {
             padding: 4rem 0;
             background-color: white;
         }
-        
+
         .testimonial-card {
             background-color: var(--light-gray);
             padding: 2rem;
@@ -301,56 +304,56 @@
             margin-bottom: 2rem;
             border-left: 4px solid var(--secondary-color);
         }
-        
+
         .testimonial-text {
             font-style: italic;
             color: var(--dark-gray);
             margin-bottom: 1.5rem;
             font-size: 1.05rem;
         }
-        
+
         .testimonial-author {
             font-weight: 600;
             color: var(--primary-color);
         }
-        
+
         .testimonial-rating {
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        
+
         /* Footer Styles */
         .footer {
             background-color: var(--accent-color);
             color: white;
             padding: 3rem 0 1rem;
         }
-        
+
         .footer h5 {
             color: white;
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
-        
+
         .footer ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .footer ul li {
             margin-bottom: 0.5rem;
         }
-        
+
         .footer ul li a {
             color: #bdc3c7;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .footer ul li a:hover {
             color: var(--secondary-color);
         }
-        
+
         .footer-bottom {
             border-top: 1px solid #4a5568;
             padding-top: 1rem;
@@ -358,32 +361,32 @@
             text-align: center;
             color: #bdc3c7;
         }
-        
+
         .footer-social a {
             color: #bdc3c7;
             font-size: 1.25rem;
             margin: 0 0.5rem;
             transition: color 0.3s ease;
         }
-        
+
         .footer-social a:hover {
             color: var(--secondary-color);
         }
-        
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
-            
+
             .contact-info {
                 text-align: center;
                 margin-top: 1rem;
@@ -391,6 +394,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Top Social Bar -->
     <div class="social-top-bar py-2">
@@ -445,7 +449,8 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'rgba(255, 255, 255, 1)\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');"></span>
+                <span class="navbar-toggler-icon"
+                    style="background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'rgba(255, 255, 255, 1)\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
@@ -453,7 +458,8 @@
                         <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown">
                             Services
                         </a>
                         <ul class="dropdown-menu">
@@ -490,16 +496,17 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="hero-title">Professional Rendering Services Across Sydney</h1>
-                    <p class="hero-subtitle">Transform your property with expert cement, acrylic, and concrete rendering. Located in Campbelltown, serving all Sydney regions with quality craftsmanship and competitive prices.</p>
+                    <p class="hero-subtitle">Transform your property with expert cement, acrylic, and concrete
+                        rendering. Located in Campbelltown, serving all Sydney regions with quality craftsmanship and
+                        competitive prices.</p>
                     <div class="d-flex flex-column flex-sm-row gap-3">
                         <a href="#contact" class="btn btn-primary-custom">Get Free Quote Today</a>
                         <a href="#services" class="btn btn-outline-light btn-outline-custom">View Our Services</a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <img src="https://picsum.photos/400/250?random=7" 
-                         alt="Professional Rendering Services" 
-                         class="img-fluid rounded shadow">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&h=400&fit=crop"
+                        alt="Professional Rendering Services" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -509,8 +516,9 @@
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title">Our Rendering Services</h2>
-            <p class="section-subtitle">We specialize in all types of rendering services with years of experience and professional workmanship</p>
-            
+            <p class="section-subtitle">We specialize in all types of rendering services with years of experience and
+                professional workmanship</p>
+
             <div class="row">
                 <!-- Cement Rendering Card -->
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -520,9 +528,12 @@
                         </div>
                         <h3 class="service-title">Cement Rendering Sydney</h3>
                         <p class="service-description">
-                            Cement render provides a massive, thick, and durable covering for your building's substrate. First used in Europe centuries ago, it offers excellent weather resistance and structural protection for brick, stone, and concrete buildings.
+                            Cement render provides a massive, thick, and durable covering for your building's substrate.
+                            First used in Europe centuries ago, it offers excellent weather resistance and structural
+                            protection for brick, stone, and concrete buildings.
                         </p>
-                        <a href="#cement-rendering" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#cement-rendering" class="read-more-btn">Read More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -534,9 +545,12 @@
                         </div>
                         <h3 class="service-title">Acrylic Rendering Sydney</h3>
                         <p class="service-description">
-                            Acrylic render is an excellent investment for homes requiring modern, flexible coating solutions. It provides superior adhesion, crack resistance, and comes in a wide range of colors and finishes for stunning aesthetic appeal.
+                            Acrylic render is an excellent investment for homes requiring modern, flexible coating
+                            solutions. It provides superior adhesion, crack resistance, and comes in a wide range of
+                            colors and finishes for stunning aesthetic appeal.
                         </p>
-                        <a href="#acrylic-rendering" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#acrylic-rendering" class="read-more-btn">Read More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -548,9 +562,12 @@
                         </div>
                         <h3 class="service-title">Concrete Rendering Sydney</h3>
                         <p class="service-description">
-                            Add a unique look to your brick or cement walls with our expert concrete rendering services. We specialize in unique plaster finishes including Venetian plaster and Japanese plasters for distinctive results.
+                            Add a unique look to your brick or cement walls with our expert concrete rendering services.
+                            We specialize in unique plaster finishes including Venetian plaster and Japanese plasters
+                            for distinctive results.
                         </p>
-                        <a href="#concrete-rendering" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#concrete-rendering" class="read-more-btn">Read More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -562,9 +579,12 @@
                         </div>
                         <h3 class="service-title">Texture & Granosite Coating</h3>
                         <p class="service-description">
-                            Hide surface defects and enhance your building's appearance with our texture and granosite coating services. Perfect for covering imperfections while adding visual interest and weather protection.
+                            Hide surface defects and enhance your building's appearance with our texture and granosite
+                            coating services. Perfect for covering imperfections while adding visual interest and
+                            weather protection.
                         </p>
-                        <a href="#texture-coating" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#texture-coating" class="read-more-btn">Read More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -576,9 +596,12 @@
                         </div>
                         <h3 class="service-title">Cement Rendering Repairs</h3>
                         <p class="service-description">
-                            We handle both large and small cement rendering repairs with affordable pricing and professional workmanship. Years of experience ensure quality repairs that restore and protect your property.
+                            We handle both large and small cement rendering repairs with affordable pricing and
+                            professional workmanship. Years of experience ensure quality repairs that restore and
+                            protect your property.
                         </p>
-                        <a href="#rendering-repairs" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#rendering-repairs" class="read-more-btn">Read More <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -590,7 +613,8 @@
                         </div>
                         <h3 class="service-title">Free Consultation</h3>
                         <p class="service-description">
-                            Not sure which rendering service is right for your project? We offer free consultations and quotes to help you choose the best solution for your specific needs and budget requirements.
+                            Not sure which rendering service is right for your project? We offer free consultations and
+                            quotes to help you choose the best solution for your specific needs and budget requirements.
                         </p>
                         <a href="#contact" class="read-more-btn">Get Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -606,7 +630,9 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h2 class="section-title text-start">Why Choose Premier Render Solutions?</h2>
                     <p class="about-text">
-                        We are a professional rendering business located in Campbelltown, proudly serving all Sydney regions. Our team brings years of experience and expertise to every project, ensuring quality results that stand the test of time.
+                        We are a professional rendering business located in Campbelltown, proudly serving all Sydney
+                        regions. Our team brings years of experience and expertise to every project, ensuring quality
+                        results that stand the test of time.
                     </p>
                     <ul class="feature-list">
                         <li><i class="fas fa-check-circle"></i> Located in Campbelltown, serving all Sydney regions</li>
@@ -618,9 +644,8 @@
                     </ul>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://picsum.photos/400/250?random=8" 
-                         alt="Professional Rendering Team" 
-                         class="img-fluid rounded shadow">
+                    <img src="https://picsum.photos/400/250?random=8" alt="Professional Rendering Team"
+                        class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -631,48 +656,42 @@
         <div class="container">
             <h2 class="section-title">Our Recent Works</h2>
             <p class="section-subtitle">Browse through our portfolio of successful rendering projects across Sydney</p>
-            
+
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/250?random=1" 
-                             alt="Cement Rendering Project" 
-                             class="img-fluid">
+                        <img src="https://picsum.photos/400/250?random=1" alt="Cement Rendering Project"
+                            class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/250?random=2" 
-                             alt="Acrylic Rendering Project" 
-                             class="img-fluid">
+                        <img src="https://picsum.photos/400/250?random=2" alt="Acrylic Rendering Project"
+                            class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/250?random=3" 
-                             alt="Concrete Rendering Project" 
-                             class="img-fluid">
+                        <img src="https://picsum.photos/400/250?random=3" alt="Concrete Rendering Project"
+                            class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/250?random=4" 
-                             alt="Texture Coating Project" 
-                             class="img-fluid">
+                        <img src="https://picsum.photos/400/250?random=4" alt="Texture Coating Project"
+                            class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/250?random=5" 
-                             alt="Rendering Repair Project" 
-                             class="img-fluid">
+                        <img src="https://picsum.photos/400/250?random=5" alt="Rendering Repair Project"
+                            class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/250?random=6" 
-                             alt="Commercial Rendering Project" 
-                             class="img-fluid">
+                        <img src="https://picsum.photos/400/250?random=6" alt="Commercial Rendering Project"
+                            class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -684,7 +703,7 @@
         <div class="container">
             <h2 class="section-title">What Our Clients Say</h2>
             <p class="section-subtitle">Read testimonials from satisfied customers across Sydney</p>
-            
+
             <div class="row">
                 <div class="col-lg-6">
                     <div class="testimonial-card">
@@ -696,7 +715,9 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p class="testimonial-text">
-                            "Premier Render Solutions did an amazing job on our home's exterior. The cement rendering looks fantastic and has really improved our property's curb appeal. Professional service from start to finish!"
+                            "Premier Render Solutions did an amazing job on our home's exterior. The cement rendering
+                            looks fantastic and has really improved our property's curb appeal. Professional service
+                            from start to finish!"
                         </p>
                         <div class="testimonial-author">Sarah Johnson - Campbelltown</div>
                     </div>
@@ -711,7 +732,9 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p class="testimonial-text">
-                            "Excellent workmanship and competitive pricing. The team was punctual, clean, and delivered exactly what was promised. Our acrylic rendering has been perfect for over two years now. Highly recommended!"
+                            "Excellent workmanship and competitive pricing. The team was punctual, clean, and delivered
+                            exactly what was promised. Our acrylic rendering has been perfect for over two years now.
+                            Highly recommended!"
                         </p>
                         <div class="testimonial-author">Michael Chen - Liverpool</div>
                     </div>
@@ -720,108 +743,117 @@
         </div>
     </section>
 
-  <!-- Contact Section -->
-<section id="contact" class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h2 class="hero-title">Get Your Free Quote Today</h2>
-                <p class="hero-subtitle">Ready to transform your property? Contact Premier Render Solutions for professional rendering services across Sydney. We provide free quotes and expert consultations.</p>
-                <div class="d-flex flex-column gap-3">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-phone fa-2x me-3" style="color: var(--secondary-color);"></i>
-                        <div>
-                            <strong>Call Us:</strong><br>
-                            (02) 1234-5678
+    <!-- Contact Section -->
+    <section id="contact" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="hero-title">Get Your Free Quote Today</h2>
+                    <p class="hero-subtitle">Ready to transform your property? Contact Premier Render Solutions for
+                        professional rendering services across Sydney. We provide free quotes and expert consultations.
+                    </p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-phone fa-2x me-3" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <strong>Call Us:</strong><br>
+                                (02) 1234-5678
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-envelope fa-2x me-3" style="color: var(--secondary-color);"></i>
-                        <div>
-                            <strong>Email Us:</strong><br>
-                            info@premierrender.com.au
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope fa-2x me-3" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <strong>Email Us:</strong><br>
+                                info@premierrender.com.au
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-map-marker-alt fa-2x me-3" style="color: var(--secondary-color);"></i>
-                        <div>
-                            <strong>Location:</strong><br>
-                            Campbelltown, All Sydney Regions
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt fa-2x me-3" style="color: var(--secondary-color);"></i>
+                            <div>
+                                <strong>Location:</strong><br>
+                                Campbelltown, All Sydney Regions
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 mt-4 mt-lg-0">
-                <form action="#" method="post" class="bg-white p-4 rounded shadow">
-                    <h3 class="service-title mb-4">Request a Free Quote</h3>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary-custom w-100">Submit Request</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer Section (Added to complete the page structure) -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5>About Premier Render Solutions</h5>
-                <p class="text-white-50">We are a professional rendering business based in Campbelltown, serving all Sydney regions with expert cement, acrylic, and concrete rendering services. Contact us for a free quote today!</p>
-            </div>
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#gallery">Our Works</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Contact Info</h5>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt me-2"></i> Campbelltown, Sydney</li>
-                    <li><i class="fas fa-phone me-2"></i> (02) 1234-5678</li>
-                    <li><i class="fas fa-envelope me-2"></i> info@premierrender.com.au</li>
-                    <li><i class="fas fa-clock me-2"></i> Mon - Fri: 7:00 AM - 6:00 PM</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Follow Us</h5>
-                <div class="footer-social">
-                    <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-google"></i></a>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <form action="#" method="post" class="bg-white p-4 rounded shadow">
+                        <h3 class="service-title mb-4">Request a Free Quote</h3>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5"
+                                placeholder="Tell us about your project" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">Submit Request</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Premier Render Solutions. All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
+    </section>
 
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Section (Added to complete the page structure) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>About Premier Render Solutions</h5>
+                    <p class="text-white-50">We are a professional rendering business based in Campbelltown, serving all
+                        Sydney regions with expert cement, acrylic, and concrete rendering services. Contact us for a
+                        free quote today!</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Our Works</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Campbelltown, Sydney</li>
+                        <li><i class="fas fa-phone me-2"></i> (02) 1234-5678</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@premierrender.com.au</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon - Fri: 7:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="footer-social">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Premier Render Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
