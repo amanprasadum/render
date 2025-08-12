@@ -440,35 +440,7 @@
             }
         }
 
-        /* Animated Badge Styles */
-        .badge-container {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .badge-container:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
-        }
-
-        .badge-glow {
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-            animation: glow 3s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        @keyframes glow {
-
-            0%,
-            100% {
-                transform: translateX(-20%) scale(1);
-                opacity: 0.3;
-            }
-
-            50% {
-                transform: translateX(20%) scale(1.2);
-                opacity: 0.5;
-            }
-        }
+        
     </style>
 </head>
 
@@ -1262,19 +1234,7 @@
                     </ul>
                 </div>
             </div>
-            <!-- Animated Company Badge -->
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <a href="https://webeasyexperts.com/" target="_blank" class="text-decoration-none">
-                        <div class="badge-container d-inline-block position-relative overflow-hidden py-3 px-5 rounded-pill"
-                            style="background: linear-gradient(45deg, var(--accent-color), #c0392b); box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); transition: all 0.3s ease;">
-                            <span class="badge-text fw-bold fs-6 text-white position-relative z-1">Crafted with
-                                Excellence by Web EASY Experts</span>
-                            <span class="badge-glow position-absolute start-0 top-0 w-100 h-100"></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            
         </div>
     </footer>
 
