@@ -122,7 +122,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark-text);
-            padding-top: 80px; /* Fix for fixed navbar overlap */
+            padding-top: 80px;
+            /* Fix for fixed navbar overlap */
         }
 
         /* ========== HERO SECTION ========== */
@@ -140,7 +141,8 @@
         }
 
         .carousel-item {
-            min-height: 100vh; /* Ensure each slide has full height */
+            min-height: 100vh;
+            /* Ensure each slide has full height */
         }
 
         /* ========== BUTTONS ========== */
@@ -437,6 +439,36 @@
                 padding-top: 60px;
             }
         }
+
+        /* Animated Badge Styles */
+        .badge-container {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .badge-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+        }
+
+        .badge-glow {
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            animation: glow 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                transform: translateX(-20%) scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateX(20%) scale(1.2);
+                opacity: 0.5;
+            }
+        }
     </style>
 </head>
 
@@ -486,7 +518,8 @@
     <section id="home" class="hero-section">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
@@ -497,8 +530,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h1 class="display-3 fw-bold mb-4">Transform Your Property with Sydney's Leading Rendering Experts</h1>
-                                    <p class="lead mb-4">At DM Render, we bring walls to life with flawless finishes and long-lasting protection. Whether it's a modern home or a commercial facade, we deliver rendering solutions that elevate your space.</p>
+                                    <h1 class="display-3 fw-bold mb-4">Transform Your Property with Sydney's Leading
+                                        Rendering Experts</h1>
+                                    <p class="lead mb-4">At DM Render, we bring walls to life with flawless finishes and
+                                        long-lasting protection. Whether it's a modern home or a commercial facade, we
+                                        deliver rendering solutions that elevate your space.</p>
                                     <div class="d-flex flex-wrap gap-3">
                                         <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
                                         <a href="#gallery" class="btn btn-outline-light btn-lg">View Our Work</a>
@@ -515,10 +551,13 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <h1 class="display-3 fw-bold mb-4">Bring Beauty and Strength to Your Walls</h1>
-                                    <p class="lead mb-4">At DM Render, we treat every project like a canvas—creating smooth, resilient finishes that enhance your property’s charm and value. Let’s build something beautiful together.</p>
+                                    <p class="lead mb-4">At DM Render, we treat every project like a canvas—creating
+                                        smooth, resilient finishes that enhance your property’s charm and value. Let’s
+                                        build something beautiful together.</p>
                                     <div class="d-flex flex-wrap gap-3">
                                         <a href="#contact" class="btn btn-primary btn-lg">Get Your Free Quote</a>
-                                        <a href="#gallery" class="btn btn-outline-light btn-lg">Browse Our Recent Projects</a>
+                                        <a href="#gallery" class="btn btn-outline-light btn-lg">Browse Our Recent
+                                            Projects</a>
                                     </div>
                                 </div>
                             </div>
@@ -532,7 +571,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <h1 class="display-3 fw-bold mb-4">Precision Rendering Backed by Experience</h1>
-                                    <p class="lead mb-4">With years of industry expertise, DM Render delivers flawless finishes using premium materials and proven techniques. We’re the go-to team for reliable, high-quality rendering in Sydney.</p>
+                                    <p class="lead mb-4">With years of industry expertise, DM Render delivers flawless
+                                        finishes using premium materials and proven techniques. We’re the go-to team for
+                                        reliable, high-quality rendering in Sydney.</p>
                                     <div class="d-flex flex-wrap gap-3">
                                         <a href="#contact" class="btn btn-primary btn-lg">Request a Free Estimate</a>
                                         <a href="#gallery" class="btn btn-outline-light btn-lg">View Case Studies</a>
@@ -559,9 +600,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="display-5 fw-bold mb-4">Professional Rendering Services for Homes & Businesses Across Sydney</h2>
-                    <p class="lead text-muted">Welcome to DM Render, one of trusted companies for high-quality rendering services in Sydney. With years of experience and a passion for flawless finishes, we transform ordinary walls into stunning surfaces that stand the test of time. Whether you're renovating your home, upgrading a commercial property, or building from scratch, our Sydney rendering expert team delivers tailored solutions using the latest techniques and premium materials.</p>
-                    <p class="text-muted">From cement and acrylic to lime and silicone rendering, we offer a wide range of finishes to suit every style and budget. Our commitment to craftsmanship, punctuality, and customer satisfaction makes us one of Sydney's top rendering companies.</p>
+                    <h2 class="display-5 fw-bold mb-4">Professional Rendering Services for Homes & Businesses Across
+                        Sydney</h2>
+                    <p class="lead text-muted">Welcome to DM Render, one of trusted companies for high-quality rendering
+                        services in Sydney. With years of experience and a passion for flawless finishes, we transform
+                        ordinary walls into stunning surfaces that stand the test of time. Whether you're renovating
+                        your home, upgrading a commercial property, or building from scratch, our Sydney rendering
+                        expert team delivers tailored solutions using the latest techniques and premium materials.</p>
+                    <p class="text-muted">From cement and acrylic to lime and silicone rendering, we offer a wide range
+                        of finishes to suit every style and budget. Our commitment to craftsmanship, punctuality, and
+                        customer satisfaction makes us one of Sydney's top rendering companies.</p>
                 </div>
             </div>
         </div>
@@ -574,7 +622,8 @@
                 <div class="col-lg-8 mx-auto text-center mb-5">
                     <h2 class="display-5 fw-bold mb-3">Our Services</h2>
                     <p class="lead text-muted">Professional Rendering Services Across Sydney</p>
-                    <p class="text-muted">We offer a full suite of rendering solutions tailored to your property's needs:</p>
+                    <p class="text-muted">We offer a full suite of rendering solutions tailored to your property's
+                        needs:</p>
                 </div>
             </div>
 
@@ -586,7 +635,9 @@
                         <div class="text-center">
                             <i class="bi bi-brush service-icon"></i>
                             <h4 class="fw-bold mb-3">Acrylic Rendering</h4>
-                            <p class="text-muted">Acrylic render offers a flexible, crack-resistant finish that's perfect for modern homes and commercial buildings. It's available in a wide range of colours and textures.</p>
+                            <p class="text-muted">Acrylic render offers a flexible, crack-resistant finish that's
+                                perfect for modern homes and commercial buildings. It's available in a wide range of
+                                colours and textures.</p>
                         </div>
                     </div>
                 </div>
@@ -597,7 +648,8 @@
                         <div class="text-center">
                             <i class="bi bi-bricks service-icon"></i>
                             <h4 class="fw-bold mb-3">Cement Rendering</h4>
-                            <p class="text-muted">Traditional and tough, cement render provides a solid base with options for smooth or textured finishes. Great for exterior walls and fences.</p>
+                            <p class="text-muted">Traditional and tough, cement render provides a solid base with
+                                options for smooth or textured finishes. Great for exterior walls and fences.</p>
                         </div>
                     </div>
                 </div>
@@ -608,7 +660,8 @@
                         <div class="text-center">
                             <i class="bi bi-tree service-icon"></i>
                             <h4 class="fw-bold mb-3">Lime Rendering</h4>
-                            <p class="text-muted">Breathable and eco-friendly, lime render is ideal for older or heritage properties. It allows moisture to escape, preventing long-term damage.</p>
+                            <p class="text-muted">Breathable and eco-friendly, lime render is ideal for older or
+                                heritage properties. It allows moisture to escape, preventing long-term damage.</p>
                         </div>
                     </div>
                 </div>
@@ -619,7 +672,8 @@
                         <div class="text-center">
                             <i class="bi bi-palette service-icon"></i>
                             <h4 class="fw-bold mb-3">Texture Coating</h4>
-                            <p class="text-muted">Add visual interest with texture coatings that mimic stone, sand, or custom patterns. Perfect for feature walls and facades.</p>
+                            <p class="text-muted">Add visual interest with texture coatings that mimic stone, sand, or
+                                custom patterns. Perfect for feature walls and facades.</p>
                         </div>
                     </div>
                 </div>
@@ -630,7 +684,8 @@
                         <div class="text-center">
                             <i class="bi bi-gem service-icon"></i>
                             <h4 class="fw-bold mb-3">Polished Concrete</h4>
-                            <p class="text-muted">A sleek, modern surface that's easy to maintain and perfect for floors, benchtops, and commercial spaces.</p>
+                            <p class="text-muted">A sleek, modern surface that's easy to maintain and perfect for
+                                floors, benchtops, and commercial spaces.</p>
                         </div>
                     </div>
                 </div>
@@ -641,7 +696,8 @@
                         <div class="text-center">
                             <i class="bi bi-tools service-icon"></i>
                             <h4 class="fw-bold mb-3">Remedial Work & Repairs</h4>
-                            <p class="text-muted">Cracks, flaking, or water damage? We restore your surfaces with expert techniques and long-lasting results.</p>
+                            <p class="text-muted">Cracks, flaking, or water damage? We restore your surfaces with expert
+                                techniques and long-lasting results.</p>
                         </div>
                     </div>
                 </div>
@@ -649,7 +705,8 @@
 
             <div class="row mt-5">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="lead">Whether you're renovating or building new, DM Render has the expertise to deliver stunning results.</p>
+                    <p class="lead">Whether you're renovating or building new, DM Render has the expertise to deliver
+                        stunning results.</p>
                 </div>
             </div>
 
@@ -658,7 +715,9 @@
                 <div class="col-lg-8 mx-auto text-center mb-5">
                     <h2 class="display-5 fw-bold mb-3">Our Rendering Services</h2>
                     <p class="lead text-muted">Top Sydney Rendering Services for Homes & Businesses</p>
-                    <p class="text-muted">At DM Render, we offer a wide range of professional rendering solutions tailored to Sydney’s diverse building styles. Whether you're upgrading your home or enhancing a commercial property, our finishes are designed to last and impress.</p>
+                    <p class="text-muted">At DM Render, we offer a wide range of professional rendering solutions
+                        tailored to Sydney’s diverse building styles. Whether you're upgrading your home or enhancing a
+                        commercial property, our finishes are designed to last and impress.</p>
                 </div>
             </div>
 
@@ -670,7 +729,10 @@
                             <i class="bi bi-bricks service-icon"></i>
                             <h4 class="fw-bold mb-3">Cement Rendering Sydney</h4>
                             <p class="text-muted">Strong, Reliable, and Cost-Effective</p>
-                            <p class="text-muted">Cement rendering is one of the most popular choices for Sydney homes and buildings. It provides a durable finish that protects brick and concrete surfaces while giving your property a clean, modern look. Our expert team ensures smooth application and long-lasting results.</p>
+                            <p class="text-muted">Cement rendering is one of the most popular choices for Sydney homes
+                                and buildings. It provides a durable finish that protects brick and concrete surfaces
+                                while giving your property a clean, modern look. Our expert team ensures smooth
+                                application and long-lasting results.</p>
                         </div>
                     </div>
                 </div>
@@ -682,7 +744,10 @@
                             <i class="bi bi-brush service-icon"></i>
                             <h4 class="fw-bold mb-3">Acrylic Rendering Sydney</h4>
                             <p class="text-muted">Flexible Finish for Modern Exteriors</p>
-                            <p class="text-muted">Acrylic rendering is ideal for Sydney’s changing weather. It’s flexible, crack-resistant, and perfect for newer homes or buildings with movement. DM Render uses high-quality acrylic render to deliver a smooth, stylish finish that stands the test of time.</p>
+                            <p class="text-muted">Acrylic rendering is ideal for Sydney’s changing weather. It’s
+                                flexible, crack-resistant, and perfect for newer homes or buildings with movement. DM
+                                Render uses high-quality acrylic render to deliver a smooth, stylish finish that stands
+                                the test of time.</p>
                         </div>
                     </div>
                 </div>
@@ -694,7 +759,10 @@
                             <i class="bi bi-droplet service-icon"></i>
                             <h4 class="fw-bold mb-3">Silicone Rendering Sydney</h4>
                             <p class="text-muted">Water-Repellent and Breathable Protection</p>
-                            <p class="text-muted">Silicone rendering offers excellent water resistance while allowing your walls to breathe. It’s perfect for Sydney’s humid conditions and coastal areas. Our silicone render finishes are sleek, durable, and low-maintenance—ideal for both homes and commercial spaces.</p>
+                            <p class="text-muted">Silicone rendering offers excellent water resistance while allowing
+                                your walls to breathe. It’s perfect for Sydney’s humid conditions and coastal areas. Our
+                                silicone render finishes are sleek, durable, and low-maintenance—ideal for both homes
+                                and commercial spaces.</p>
                         </div>
                     </div>
                 </div>
@@ -706,7 +774,10 @@
                             <i class="bi bi-tree service-icon"></i>
                             <h4 class="fw-bold mb-3">Lime Rendering Sydney</h4>
                             <p class="text-muted">Eco-Friendly Finish for Heritage and Modern Homes</p>
-                            <p class="text-muted">Lime rendering is a traditional technique that’s making a comeback in Sydney. It’s breathable, natural, and ideal for older buildings or those seeking a sustainable finish. DM Render’s lime render adds charm and character while protecting your walls.</p>
+                            <p class="text-muted">Lime rendering is a traditional technique that’s making a comeback in
+                                Sydney. It’s breathable, natural, and ideal for older buildings or those seeking a
+                                sustainable finish. DM Render’s lime render adds charm and character while protecting
+                                your walls.</p>
                         </div>
                     </div>
                 </div>
@@ -718,7 +789,10 @@
                             <i class="bi bi-building service-icon"></i>
                             <h4 class="fw-bold mb-3">Concrete Rendering Sydney</h4>
                             <p class="text-muted">Sleek and Industrial Strength</p>
-                            <p class="text-muted">Concrete rendering is perfect for modern architectural styles and commercial buildings. It offers a strong, minimalist finish that’s both stylish and functional. DM Render’s concrete render is applied with precision for a flawless, long-lasting surface.</p>
+                            <p class="text-muted">Concrete rendering is perfect for modern architectural styles and
+                                commercial buildings. It offers a strong, minimalist finish that’s both stylish and
+                                functional. DM Render’s concrete render is applied with precision for a flawless,
+                                long-lasting surface.</p>
                         </div>
                     </div>
                 </div>
@@ -730,7 +804,10 @@
                             <i class="bi bi-palette service-icon"></i>
                             <h4 class="fw-bold mb-3">Texture Rendering & Texture Coating</h4>
                             <p class="text-muted">Add Style and Depth to Your Walls</p>
-                            <p class="text-muted">Texture rendering and texture coating allow you to personalize your property with unique patterns and finishes. From smooth to rough textures, DM Render offers a wide range of options to suit your design vision. Perfect for feature walls and facades.</p>
+                            <p class="text-muted">Texture rendering and texture coating allow you to personalize your
+                                property with unique patterns and finishes. From smooth to rough textures, DM Render
+                                offers a wide range of options to suit your design vision. Perfect for feature walls and
+                                facades.</p>
                         </div>
                     </div>
                 </div>
@@ -745,13 +822,20 @@
                 <!-- Commercial Services -->
                 <div class="col-lg-6">
                     <h3 class="fw-bold mb-4">Modernise Your Commercial Space with Sydney's Top Rendering Team</h3>
-                    <p class="text-muted">For top-tier commercial rendering services for Sydney's businesses, trust DM Render to deliver precision finishes that stand the test of time. Whether it's an office, retail space, or apartment complex, we deliver clean, durable finishes that enhance your property's value and appeal. Our team works efficiently to meet deadlines and maintain site cleanliness.</p>
+                    <p class="text-muted">For top-tier commercial rendering services for Sydney's businesses, trust DM
+                        Render to deliver precision finishes that stand the test of time. Whether it's an office, retail
+                        space, or apartment complex, we deliver clean, durable finishes that enhance your property's
+                        value and appeal. Our team works efficiently to meet deadlines and maintain site cleanliness.
+                    </p>
                 </div>
 
                 <!-- Residential Services -->
                 <div class="col-lg-6">
                     <h3 class="fw-bold mb-4">Sydney House Rendering Services – Built to Last, Designed to Impress</h3>
-                    <p class="text-muted">Upgrade Your Home with Style and Protection – DM Render Offers Expert House Rendering Services in Sydney That Deliver Lasting Impact. We help Sydney homeowners choose the right render for their property—whether it's cement, acrylic, or textured. Our finishes improve curb appeal and protect against weather damage.</p>
+                    <p class="text-muted">Upgrade Your Home with Style and Protection – DM Render Offers Expert House
+                        Rendering Services in Sydney That Deliver Lasting Impact. We help Sydney homeowners choose the
+                        right render for their property—whether it's cement, acrylic, or textured. Our finishes improve
+                        curb appeal and protect against weather damage.</p>
                 </div>
             </div>
         </div>
@@ -882,7 +966,9 @@
             <div class="row mt-5">
                 <div class="col-lg-10 mx-auto">
                     <h3 class="fw-bold mb-4 text-center">Why DM Render is Sydney’s Trusted Rendering Company</h3>
-                    <p class="text-muted text-center">With over a decade of experience, DM Render has become a go-to name among rendering companies in Sydney. Our team of skilled professionals is passionate about delivering high-quality finishes that combine style, durability, and precision.</p>
+                    <p class="text-muted text-center">With over a decade of experience, DM Render has become a go-to
+                        name among rendering companies in Sydney. Our team of skilled professionals is passionate about
+                        delivering high-quality finishes that combine style, durability, and precision.</p>
 
                     <div class="row g-4 mt-4">
                         <div class="col-md-6">
@@ -907,7 +993,8 @@
                         </div>
                     </div>
 
-                    <p class="text-center mt-4 fw-bold fs-5" style="color: var(--accent-color);">We don’t just render walls—we build lasting impressions.</p>
+                    <p class="text-center mt-4 fw-bold fs-5" style="color: var(--accent-color);">We don’t just render
+                        walls—we build lasting impressions.</p>
                 </div>
             </div>
         </div>
@@ -934,7 +1021,8 @@
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                         </div>
-                        <p class="text-muted">“DM Render did an amazing job on our home. The acrylic finish looks fantastic and the team was so professional!”</p>
+                        <p class="text-muted">“DM Render did an amazing job on our home. The acrylic finish looks
+                            fantastic and the team was so professional!”</p>
                         <div class="fw-bold text-end">— Emily Saunders, Parramatta</div>
                     </div>
                 </div>
@@ -949,7 +1037,8 @@
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                         </div>
-                        <p class="text-muted">“We hired DM Render for our commercial building and couldn’t be happier. Fast, clean, and reliable.”</p>
+                        <p class="text-muted">“We hired DM Render for our commercial building and couldn’t be happier.
+                            Fast, clean, and reliable.”</p>
                         <div class="fw-bold text-end">— James Thompson, Sydney CBD</div>
                     </div>
                 </div>
@@ -964,7 +1053,8 @@
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                         </div>
-                        <p class="text-muted">“Highly recommend! Great communication, fair pricing, and the lime render gave our heritage home a beautiful finish.”</p>
+                        <p class="text-muted">“Highly recommend! Great communication, fair pricing, and the lime render
+                            gave our heritage home a beautiful finish.”</p>
                         <div class="fw-bold text-end">— Sarah Mitchell, Balmain</div>
                     </div>
                 </div>
@@ -1055,7 +1145,9 @@
                     <h2 class="display-5 fw-bold mb-3">Ready to Render You're Walls?</h2>
                     <p class="lead mb-4">Let's Talk For Rendering!</p>
                     <p class="mb-4">DM Render – One of the Top Rendering Companies in Sydney</p>
-                    <p class="mb-4">Looking for a reliable Sydney rendering expert? DM Render is one of local offers professional rendering services that enhance your property's value and appeal. As one of the top rendering companies in Sydney, we're proud to deliver quality finishes at affordable prices.</p>
+                    <p class="mb-4">Looking for a reliable Sydney rendering expert? DM Render is one of local offers
+                        professional rendering services that enhance your property's value and appeal. As one of the top
+                        rendering companies in Sydney, we're proud to deliver quality finishes at affordable prices.</p>
                     <p class="mb-5">Contact us today for a free quote and expert advice.</p>
                     <a href="#contact" class="btn btn-light btn-lg">Get Your Free Quote Now</a>
                 </div>
@@ -1142,12 +1234,18 @@
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-4">Our Services</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Acrylic Rendering</a></li>
-                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Cement Rendering</a></li>
-                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Lime Rendering</a></li>
-                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Texture Coating</a></li>
-                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Polished Concrete</a></li>
-                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Remedial Work & Repairs</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Acrylic
+                                Rendering</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Cement
+                                Rendering</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Lime Rendering</a>
+                        </li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Texture Coating</a>
+                        </li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Polished
+                                Concrete</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Remedial Work &
+                                Repairs</a></li>
                     </ul>
                 </div>
 
@@ -1164,66 +1262,21 @@
                     </ul>
                 </div>
             </div>
+            <!-- Animated Company Badge -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <a href="https://webeasyexperts.com/" target="_blank" class="text-decoration-none">
+                        <div class="badge-container d-inline-block position-relative overflow-hidden py-3 px-5 rounded-pill"
+                            style="background: linear-gradient(45deg, var(--accent-color), #c0392b); box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); transition: all 0.3s ease;">
+                            <span class="badge-text fw-bold fs-6 text-white position-relative z-1">Crafted with
+                                Excellence by Web EASY Experts</span>
+                            <span class="badge-glow position-absolute start-0 top-0 w-100 h-100"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
-    <!-- ========== FOOTER ========== -->
-<footer class="footer section-padding">
-    <div class="container">
-        <div class="row g-4">
-            <!-- Company Info -->
-            <div class="col-lg-4">
-                <h3 class="fw-bold mb-4">DM Render</h3>
-                <div class="mt-4">
-                    <a href="tel:0423902926" class="text-light text-decoration-none me-3">
-                        <i class="bi bi-telephone-fill me-2"></i>0423 902 926
-                    </a>
-                </div>
-                <div class="mt-2">
-                    <a href="mailto:info@dmrender.com.au" class="text-light text-decoration-none">
-                        <i class="bi bi-envelope-fill me-2"></i>info@dmrender.com.au
-                    </a>
-                </div>
-            </div>
-
-            <!-- Services -->
-            <div class="col-lg-4">
-                <h5 class="fw-bold mb-4">Our Services</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Acrylic Rendering</a></li>
-                    <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Cement Rendering</a></li>
-                    <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Lime Rendering</a></li>
-                    <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Texture Coating</a></li>
-                    <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Polished Concrete</a></li>
-                    <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Remedial Work & Repairs</a></li>
-                </ul>
-            </div>
-
-            <!-- Areas -->
-            <div class="col-lg-4">
-                <h5 class="fw-bold mb-4">Service Areas</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2">Inner West</li>
-                    <li class="mb-2">Eastern Suburbs</li>
-                    <li class="mb-2">Northern Beaches</li>
-                    <li class="mb-2">Western Sydney</li>
-                    <li class="mb-2">Hills District</li>
-                    <li class="mb-2">South Sydney</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Animated Company Badge -->
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <a href="https://webeasyexperts.com/" target="_blank" class="text-decoration-none">
-                    <div class="badge-container d-inline-block position-relative overflow-hidden py-3 px-5 rounded-pill" style="background: linear-gradient(45deg, var(--accent-color), #c0392b); box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); transition: all 0.3s ease;">
-                        <span class="badge-text fw-bold fs-6 text-white position-relative z-1">Crafted with Excellence by Web EASY Experts</span>
-                        <span class="badge-glow position-absolute start-0 top-0 w-100 h-100"></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
 
     <!-- ========== BOOTSTRAP JAVASCRIPT ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
