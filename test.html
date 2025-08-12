@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Render – Top Sydney Render</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        /* ========== CUSTOM PROFESSIONAL COLORS ========== */
+        :root {
+            --primary-color: #2c3e50;      /* Dark blue-gray */
+            --secondary-color: #34495e;    /* Slightly lighter blue-gray */
+            --accent-color: #e74c3c;       /* Professional red */
+            --light-bg: #ecf0f1;          /* Light gray */
+            --dark-text: #2c3e50;         /* Dark text */
+            --light-text: #7f8c8d;        /* Light gray text */
+        }
+
+        /* ========== GLOBAL STYLES ========== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            background: rgba(0,0,0,0.3);
+            padding: 2rem 0;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* ========== SECTIONS ========== */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .bg-light-custom {
+            background-color: var(--light-bg);
+        }
+
+        /* ========== SERVICE CARDS ========== */
+        .service-card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* ========== PROCESS STEPS ========== */
+        .process-step {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonial-card {
+            background: white;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* ========== RESPONSIVE ADJUSTMENTS ========== */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 80vh;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: var(--primary-color);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#home">DM Render</a>
+            
+            <!-- Mobile menu button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay w-100">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-8">
+                        <h1 class="display-3 fw-bold mb-4">Transform Your Property with Sydney's Leading Rendering Experts</h1>
+                        <p class="lead mb-4">At DM Render, we bring walls to life with flawless finishes and long-lasting protection. Whether it's a modern home or a commercial facade, we deliver rendering solutions that elevate your space.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
+                            <a href="#gallery" class="btn btn-outline-light btn-lg">View Our Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTRODUCTION SECTION ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-4">Professional Rendering Services for Homes & Businesses Across Sydney</h2>
+                    <p class="lead text-muted">Welcome to DM Render, one of trusted companies for high-quality rendering services in Sydney. With years of experience and a passion for flawless finishes, we transform ordinary walls into stunning surfaces that stand the test of time. Whether you're renovating your home, upgrading a commercial property, or building from scratch, our Sydney rendering expert team delivers tailored solutions using the latest techniques and premium materials.</p>
+                    <p class="text-muted">From cement and acrylic to lime and silicone rendering, we offer a wide range of finishes to suit every style and budget. Our commitment to craftsmanship, punctuality, and customer satisfaction makes us one of Sydney's top rendering companies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+                    <p class="lead text-muted">Professional Rendering Services Across Sydney</p>
+                    <p class="text-muted">We offer a full suite of rendering solutions tailored to your property's needs:</p>
+                </div>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="row g-4">
+                <!-- Acrylic Rendering -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card p-4">
+                        <div class="text-center">
+                            <i class="bi bi-brush service-icon"></i>
+                            <h4 class="fw-bold mb-3">Acrylic Rendering</h4>
+                            <p class="text-muted">Acrylic render offers a flexible, crack-resistant finish that's perfect for modern homes and commercial buildings. It's available in a wide range of colours and textures.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cement Rendering -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card p-4">
+                        <div class="text-center">
+                            <i class="bi bi-bricks service-icon"></i>
+                            <h4 class="fw-bold mb-3">Cement Rendering</h4>
+                            <p class="text-muted">Traditional and tough, cement render provides a solid base with options for smooth or textured finishes. Great for exterior walls and fences.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lime Rendering -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card p-4">
+                        <div class="text-center">
+                            <i class="bi bi-tree service-icon"></i>
+                            <h4 class="fw-bold mb-3">Lime Rendering</h4>
+                            <p class="text-muted">Breathable and eco-friendly, lime render is ideal for older or heritage properties. It allows moisture to escape, preventing long-term damage.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Texture Coating -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card p-4">
+                        <div class="text-center">
+                            <i class="bi bi-palette service-icon"></i>
+                            <h4 class="fw-bold mb-3">Texture Coating</h4>
+                            <p class="text-muted">Add visual interest with texture coatings that mimic stone, sand, or custom patterns. Perfect for feature walls and facades.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Polished Concrete -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card p-4">
+                        <div class="text-center">
+                            <i class="bi bi-gem service-icon"></i>
+                            <h4 class="fw-bold mb-3">Polished Concrete</h4>
+                            <p class="text-muted">A sleek, modern surface that's easy to maintain and perfect for floors, benchtops, and commercial spaces.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Remedial Work -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card p-4">
+                        <div class="text-center">
+                            <i class="bi bi-tools service-icon"></i>
+                            <h4 class="fw-bold mb-3">Remedial Work & Repairs</h4>
+                            <p class="text-muted">Cracks, flaking, or water damage? We restore your surfaces with expert techniques and long-lasting results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead">Whether you're renovating or building new, DM Render has the expertise to deliver stunning results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMMERCIAL & RESIDENTIAL SECTIONS ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Commercial Services -->
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Modernise Your Commercial Space with Sydney's Top Rendering Team</h3>
+                    <p class="text-muted">For top-tier commercial rendering services for Sydney's businesses, trust DM Render to deliver precision finishes that stand the test of time. Whether it's an office, retail space, or apartment complex, we deliver clean, durable finishes that enhance your property's value and appeal. Our team works efficiently to meet deadlines and maintain site cleanliness.</p>
+                </div>
+                
+                <!-- Residential Services -->
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Sydney House Rendering Services – Built to Last, Designed to Impress</h3>
+                    <p class="text-muted">Upgrade Your Home with Style and Protection – DM Render Offers Expert House Rendering Services in Sydney That Deliver Lasting Impact. We help Sydney homeowners choose the right render for their property—whether it's cement, acrylic, or textured. Our finishes improve curb appeal and protect against weather damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROCESS SECTION ========== -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our Smooth Rendering Process</h2>
+                    <p class="lead text-muted">Simple, Clean, and Stress-Free</p>
+                </div>
+            </div>
+            
+            <!-- Process Steps -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-12">
+                    <div class="row g-4">
+                        <!-- Step 1 -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="process-step">
+                                <div class="process-number">1</div>
+                                <h5 class="fw-bold">Free Quote & Consultation</h5>
+                                <p class="text-muted small">We assess your property and provide a clear quote.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="process-step">
+                                <div class="process-number">2</div>
+                                <h5 class="fw-bold">Design & Planning</h5>
+                                <p class="text-muted small">Choose your render type, texture, and finish.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="process-step">
+                                <div class="process-number">3</div>
+                                <h5 class="fw-bold">Surface Preparation</h5>
+                                <p class="text-muted small">We clean and prep the walls for perfect adhesion.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="process-step">
+                                <div class="process-number">4</div>
+                                <h5 class="fw-bold">Application</h5>
+                                <p class="text-muted small">Our skilled team applies the render with precision.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 5 -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="process-step">
+                                <div class="process-number">5</div>
+                                <h5 class="fw-bold">Final Touches</h5>
+                                <p class="text-muted small">We inspect and clean up, leaving your space flawless.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US SECTION ========== -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Why Choose Us</h2>
+                    <p class="lead text-muted">What Sets DM Render Apart</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-start mb-4">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold">Competitive pricing with transparent quotes</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold">Premium materials and expert craftsmanship</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold">Fast turnaround with minimal disruption</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-start mb-4">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold">100% satisfaction guarantee</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold">Friendly, professional team that treats your property with care</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead">We're not just another rendering company—we're your rendering partner.</p>
+                    <p class="text-muted">Each project reflects our commitment to quality and detail.</p>
+                </div>
+            </div>
+            
+            <!-- About Us Content -->
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="fw-bold mb-4 text-center">Why DM Render is Sydney's Trusted Rendering Company</h3>
+                    <p class="text-muted">With over a decade of experience, DM Render has become a go-to name among rendering companies in Sydney. Our team of skilled professionals is passionate about delivering high-quality finishes that combine style, durability, and precision.</p>
+                    
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                <span>Locally owned and operated</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                <span>Fully licensed and insured</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                <span>Experts in both residential and commercial rendering</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                <span>Committed to clean, timely, and professional service</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center mt-4 fw-bold">We don't just render walls—we build lasting impressions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">Real Testimonials from Happy Customers</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4">
+                    <div class="card testimonial-card p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="text-muted">"DM Render did an amazing job on our home. The acrylic finish looks fantastic and the team was so professional!"</p>
+                        <div class="fw-bold text-end">— Emily Saunders, Parramatta</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4">
+                    <div class="card testimonial-card p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="text-muted">"We hired DM Render for our commercial building and couldn't be happier. Fast, clean, and reliable."</p>
+                        <div class="fw-bold text-end">— James Thompson, Sydney CBD</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4">
+                    <div class="card testimonial-card p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="text-muted">"Highly recommend! Great communication, fair pricing, and the lime render gave our heritage home a beautiful finish."</p>
+                        <div class="fw-bold text-end">— Sarah Mitchell, Balmain</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY SECTION ========== -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">See the DM Render Difference</h2>
+                    <p class="lead text-muted">Explore our portfolio of completed projects across Sydney:</p>
+                    <ul class="list-unstyled text-muted">
+                        <li>Before & after transformations</li>
+                        <li>Residential homes, townhouses, and commercial buildings</li>
+                        <li>Custom finishes tailored to client vision</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Gallery Placeholder -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center p-5">
+                            <i class="bi bi-image fs-1 text-muted"></i>
+                            <p class="text-muted mt-3">Before & After Gallery</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center p-5">
+                            <i class="bi bi-house fs-1 text-muted"></i>
+                            <p class="text-muted mt-3">Residential Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body text-center p-5">
+                            <i class="bi bi-building fs-1 text-muted"></i>
+                            <p class="text-muted mt-3">Commercial Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICE AREAS SECTION ========== -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Service Areas</h2>
+                    <p class="lead text-muted">Proudly Serving All of Sydney</p>
+                    <p class="text-muted">We provide expert rendering services across:</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <i class="bi bi-geo-alt-fill fs-3 text-primary mb-2"></i>
+                        <h5>Inner West</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <i class="bi bi-geo-alt-fill fs-3 text-primary mb-2"></i>
+                        <h5>Eastern Suburbs</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <i class="bi bi-geo-alt-fill fs-3 text-primary mb-2"></i>
+                        <h5>Northern Beaches</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <i class="bi bi-geo-alt-fill fs-3 text-primary mb-2"></i>
+                        <h5>Western Sydney</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <i class="bi bi-geo-alt-fill fs-3 text-primary mb-2"></i>
+                        <h5>Hills District</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <i class="bi bi-geo-alt-fill fs-3 text-primary mb-2"></i>
+                        <h5>South Sydney</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="text-muted">Not sure if we cover your area? Just ask—we're happy to help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="section-padding" style="background-color: var(--primary-color); color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Render You're Walls?</h2>
+                    <p class="lead mb-4">Let's Talk For Rendering!</p>
+                    <p class="mb-4">DM Render – One of the Top Rendering Companies in Sydney</p>
+                    <p class="mb-4">Looking for a reliable Sydney rendering expert? DM Render is one of local offers professional rendering services that enhance your property's value and appeal. As one of the top rendering companies in Sydney, we're proud to deliver quality finishes at affordable prices.</p>
+                    <p class="mb-5">Contact us today for a free quote and expert advice.</p>
+                    <a href="#contact" class="btn btn-light btn-lg">Get Your Free Quote Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Contact Us</h2>
+                    <p class="lead text-muted">Ready to Upgrade Your Property? Let's Talk.</p>
+                    <p class="text-muted">Get in touch with DM Render today for a free, no-obligation quote.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="h-100">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-telephone-fill fs-1" style="color: var(--accent-color);"></i>
+                            <h4 class="fw-bold mt-3">Phone</h4>
+                            <p class="text-muted">0423 902 926</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="h-100">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-envelope-fill fs-1" style="color: var(--accent-color);"></i>
+                            <h4 class="fw-bold mt-3">Email</h4>
+                            <p class="text-muted">info@dmrender.com.au</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="h-100">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-geo-alt-fill fs-1" style="color: var(--accent-color);"></i>
+                            <h4 class="fw-bold mt-3">Location</h4>
+                            <p class="text-muted">Sydney, NSW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <h3 class="text-center mb-4">Get Your Free Quote Now</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="service" class="form-label">Service Needed</label>
+                                        <select class="form-select" id="service">
+                                            <option selected>Choose a service...</option>
+                                            <option value="acrylic">Acrylic Rendering</option>
+                                            <option value="cement">Cement Rendering</option>
+                                            <option value="lime">Lime Rendering</option>
+                                            <option value="texture">Texture Coating</option>
+                                            <option value="concrete">Polished Concrete</option>
+                                            <option value="repairs">Remedial Work & Repairs</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Project Details</label>
+                                        <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">Send Quote Request</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4">
+                    <h3 class="fw-bold mb-4">DM Render</h3>
+                    <p class="text-light">Sydney's leading rendering experts delivering quality finishes for homes and businesses across all Sydney areas.</p>
+                    <div class="mt-4">
+                        <a href="tel:0423902926" class="text-light text-decoration-none me-3">
+                            <i class="bi bi-telephone-fill me-2"></i>0423 902 926
+                        </a>
+                    </div>
+                    <div class="mt-2">
+                        <a href="mailto:info@dmrender.com.au" class="text-light text-decoration-none">
+                            <i class="bi bi-envelope-fill me-2"></i>info@dmrender.com.au
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Acrylic Rendering</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Cement Rendering</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Lime Rendering</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Texture Coating</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Polished Concrete</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Remedial Work & Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Areas -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Service Areas</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Inner West</li>
+                        <li class="mb-2">Eastern Suburbs</li>
+                        <li class="mb-2">Northern Beaches</li>
+                        <li class="mb-2">Western Sydney</li>
+                        <li class="mb-2">Hills District</li>
+                        <li class="mb-2">South Sydney</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="text-light mb-0">&copy; 2024 DM Render. All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="text-light mb-0">Professional Rendering Services Sydney</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BOOTSTRAP JAVASCRIPT ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- ========== SMOOTH SCROLLING SCRIPT ========== -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                navbar.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+    </script>
+
+</body>
+</html>
