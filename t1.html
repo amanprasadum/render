@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -99,17 +98,32 @@
             color: var(--white) !important;
         }
 
-        /* HERO SLIDER */
+        /* HERO SLIDER - FIXED */
         .hero-section {
             position: relative;
             min-height: 70vh;
+            overflow: hidden;
+        }
+
+        #heroCarousel {
+            height: 70vh;
+        }
+
+        .carousel-inner {
+            height: 100%;
+        }
+
+        .carousel-item {
+            height: 70vh;
+            transition: transform 0.8s ease-in-out;
         }
 
         .hero-slide {
             background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), url('https://picsum.photos/1920/1080?random=1');
             background-size: cover;
             background-position: center;
-            min-height: 70vh;
+            background-attachment: fixed;
+            height: 100%;
             display: flex;
             align-items: center;
             color: var(--white);
@@ -121,6 +135,21 @@
 
         .hero-slide.slide-3 {
             background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), url('https://picsum.photos/1920/1080?random=3');
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-content h1 {
@@ -164,6 +193,38 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            opacity: 0.8;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        .carousel-indicators {
+            bottom: 30px;
+        }
+
+        .carousel-indicators button {
+            background-color: var(--white);
+            opacity: 0.6;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: none;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators .active {
+            opacity: 1;
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+
         /* SECTIONS */
         .section-padding {
             padding: 80px 0;
@@ -188,33 +249,75 @@
             margin: 0 auto;
         }
 
-        .carousel-item {
-            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-        }
-
-        .carousel-item.active,
-        .carousel-item-next,
-        .carousel-item-prev {
-            display: flex !important;
-        }
-
-        .carousel-indicators {
-            bottom: 20px;
-        }
-
-        .carousel-indicators button {
-            background-color: var(--white);
-            opacity: 0.5;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+        /* ENHANCED TAB SECTION */
+        .nav-tabs {
             border: none;
+            background: var(--white);
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            margin: 0 auto;
+        }
+
+        .nav-tabs .nav-item {
             margin: 0 5px;
         }
 
-        .carousel-indicators .active {
-            opacity: 1;
-            background-color: var(--secondary-color);
+        .nav-tabs .nav-link {
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            background: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-tabs .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .nav-tabs .nav-link:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .nav-tabs .nav-link:hover::before {
+            left: 0;
+        }
+
+        .nav-tabs .nav-link.active {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .nav-tabs .nav-link.active::before {
+            left: 0;
+        }
+
+        .tab-content {
+            margin-top: 3rem;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-pane {
+            animation: fadeInUp 0.5s ease-out;
         }
 
         /* SERVICES */
@@ -307,26 +410,167 @@
             color: var(--primary-color);
         }
 
-        /* FOOTER */
+        /* ENHANCED SERVICE AREAS */
+        .service-area-card {
+            background: linear-gradient(135deg, var(--white), #f8f9fa);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(243, 156, 18, 0.1));
+            transition: left 0.4s ease;
+            z-index: 0;
+        }
+
+        .service-area-card:hover::before {
+            left: 0;
+        }
+
+        .service-area-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.2);
+            border-color: var(--secondary-color);
+        }
+
+        .service-area-card .card-body {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-area-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .service-area-card:hover .service-area-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-area-card h6 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .service-area-card:hover h6 {
+            color: var(--secondary-color);
+        }
+
+        /* ENHANCED FOOTER */
         .footer {
             background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
             color: var(--white);
-            padding: 50px 0 20px;
+            padding: 60px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color), var(--secondary-color));
         }
 
         .footer h5 {
             color: var(--accent-color);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
         }
 
         .footer a {
             color: var(--light-gray);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 2px 0;
         }
 
         .footer a:hover {
             color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .footer .list-unstyled li {
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .footer .list-unstyled li:hover {
+            padding-left: 10px;
+        }
+
+        .footer .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .contact-footer p {
+            margin-bottom: 12px;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-footer p:hover {
+            padding-left: 10px;
+        }
+
+        .contact-footer i {
+            width: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+            padding: 20px 0;
+            border-radius: 10px;
         }
 
         /* RESPONSIVE */
@@ -343,7 +587,45 @@
             .btn-hero {
                 margin: 5px 0;
             }
+
+            .nav-tabs {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-tabs .nav-link {
+                margin: 5px 0;
+            }
+
+            .service-area-card {
+                margin-bottom: 1rem;
+            }
         }
+
+        /* Additional animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+       
     </style>
 </head>
 
@@ -565,7 +847,7 @@
                 <p>We offer a full suite of rendering solutions tailored to your property's needs</p>
             </div>
 
-            <!-- Service Tabs -->
+            <!-- Enhanced Service Tabs -->
             <ul class="nav nav-tabs justify-content-center mb-5" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#residential"
@@ -848,49 +1130,49 @@
             </div>
             <div class="row text-center">
                 <div class="col-lg-2 col-md-4 col-6 mb-3">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="service-area-card">
                         <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary mb-2" style="font-size: 2rem;"></i>
+                            <i class="fas fa-map-marker-alt service-area-icon mb-2"></i>
                             <h6>Inner West</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 mb-3">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="service-area-card">
                         <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary mb-2" style="font-size: 2rem;"></i>
+                            <i class="fas fa-map-marker-alt service-area-icon mb-2"></i>
                             <h6>Eastern Suburbs</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 mb-3">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="service-area-card">
                         <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary mb-2" style="font-size: 2rem;"></i>
+                            <i class="fas fa-map-marker-alt service-area-icon mb-2"></i>
                             <h6>Northern Beaches</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 mb-3">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="service-area-card">
                         <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary mb-2" style="font-size: 2rem;"></i>
+                            <i class="fas fa-map-marker-alt service-area-icon mb-2"></i>
                             <h6>Western Sydney</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 mb-3">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="service-area-card">
                         <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary mb-2" style="font-size: 2rem;"></i>
+                            <i class="fas fa-map-marker-alt service-area-icon mb-2"></i>
                             <h6>Hills District</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 mb-3">
-                    <div class="card border-0 shadow-sm h-100">
+                    <div class="service-area-card">
                         <div class="card-body">
-                            <i class="fas fa-map-marker-alt text-primary mb-2" style="font-size: 2rem;"></i>
+                            <i class="fas fa-map-marker-alt service-area-icon mb-2"></i>
                             <h6>South Sydney</h6>
                         </div>
                     </div>
@@ -1025,11 +1307,12 @@
                     </div>
                 </div>
             </div>
-            <hr class="my-4" style="border-color: rgba(255,255,255,0.2);">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2025 DM Render. Our commitment to craftsmanship, punctuality, and customer satisfaction
-                        makes us one of Sydney's top rendering companies.</p>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>&copy; 2025 DM Render. Our commitment to craftsmanship, punctuality, and customer satisfaction
+                            makes us one of Sydney's top rendering companies.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1040,54 +1323,36 @@
 
     <!-- Custom JavaScript -->
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-    </script>
-    <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize carousel
-            const carousel = document.querySelector('#heroCarousel');
-            if (carousel) {
-                new bootstrap.Carousel(carousel, {
+            // Initialize carousel with proper configuration
+            const carouselElement = document.querySelector('#heroCarousel');
+            if (carouselElement) {
+                const carousel = new bootstrap.Carousel(carouselElement, {
                     interval: 5000,
-                    ride: 'carousel'
+                    ride: 'carousel',
+                    pause: 'hover',
+                    wrap: true,
+                    keyboard: true
+                });
+
+                // Handle carousel slide transitions
+                carouselElement.addEventListener('slide.bs.carousel', function (event) {
+                    const activeItem = event.target.querySelector('.carousel-item.active .hero-content');
+                    const nextItem = event.relatedTarget.querySelector('.hero-content');
+                    
+                    if (activeItem) {
+                        activeItem.style.animation = 'none';
+                    }
+                    
+                    setTimeout(() => {
+                        if (nextItem) {
+                            nextItem.style.animation = 'fadeInUp 0.8s ease-out';
+                        }
+                    }, 100);
                 });
             }
 
-            // Smooth scrolling
+            // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -1102,7 +1367,7 @@
             });
 
             // Active navigation highlighting
-            window.addEventListener('scroll', function () {
+            function updateActiveNav() {
                 try {
                     const sections = document.querySelectorAll('section[id]');
                     const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
@@ -1124,6 +1389,29 @@
                 } catch (error) {
                     console.error('Error in scroll event listener:', error);
                 }
+            }
+
+            // Throttled scroll event
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (scrollTimeout) {
+                    clearTimeout(scrollTimeout);
+                }
+                scrollTimeout = setTimeout(updateActiveNav, 10);
+            });
+
+            // Tab switching animations
+            const tabLinks = document.querySelectorAll('[data-bs-toggle="tab"]');
+            tabLinks.forEach(tab => {
+                tab.addEventListener('shown.bs.tab', function (e) {
+                    const targetPane = document.querySelector(e.target.getAttribute('data-bs-target'));
+                    if (targetPane) {
+                        targetPane.style.animation = 'none';
+                        setTimeout(() => {
+                            targetPane.style.animation = 'fadeInUp 0.5s ease-out';
+                        }, 10);
+                    }
+                });
             });
         });
     </script>
