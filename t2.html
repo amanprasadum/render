@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProRender Sydney - Professional Rendering Services</title>
+    <meta name="description" content="Professional cement rendering, acrylic rendering, and concrete rendering services in Sydney. Free quotes available.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #f39c12;
+            --accent-color: #f1c40f;
+            --light-yellow: #fff8dc;
+            --dark-gray: #34495e;
+            --light-gray: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        .middle-header {
+            background-color: white;
+            padding: 20px 0;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .company-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .contact-info {
+            color: var(--dark-gray);
+        }
+
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-right: 8px;
+        }
+
+        .navbar {
+            background-color: var(--secondary-color) !important;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 5px;
+            padding: 10px 15px !important;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Dropdown Styles */
+        .dropdown-menu {
+            background-color: white;
+            border: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        .dropdown-item {
+            color: var(--dark-gray) !important;
+            padding: 10px 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--light-yellow);
+            color: var(--primary-color) !important;
+            padding-left: 25px;
+        }
+
+        .dropdown-toggle::after {
+            margin-left: 8px;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6b800;
+            border-color: #e6b800;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-yellow);
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        .about-highlight {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .about-stats {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .about-stats h4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .about-stats p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-card .service-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        .about-highlight {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 30px;
+        }
+
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .company-logo {
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>Professional Rendering Services Across Sydney</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Header -->
+    <div class="middle-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="company-logo">ProRender Sydney</div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row contact-info">
+                        <div class="col-md-6">
+                            <i class="bi bi-telephone-fill"></i>
+                            <strong>Phone:</strong> (02) 9876 5432
+                        </div>
+                        <div class="col-md-6">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <strong>Address:</strong> Campbelltown, Sydney NSW
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            <i class="bi bi-house-door me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tools me-1"></i>Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#services">
+                                <i class="bi bi-brush"></i>Texture & Granosite Coating
+                            </a></li>
+                            <li><a class="dropdown-item" href="#services">
+                                <i class="bi bi-palette"></i>Acrylic Rendering
+                            </a></li>
+                            <li><a class="dropdown-item" href="#services">
+                                <i class="bi bi-bricks"></i>Cement Rendering
+                            </a></li>
+                            <li><a class="dropdown-item" href="#services">
+                                <i class="bi bi-hammer"></i>Rendering Repairs
+                            </a></li>
+                            <li><a class="dropdown-item" href="#services">
+                                <i class="bi bi-building"></i>Concrete Rendering
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">
+                            <i class="bi bi-images me-1"></i>Our Works
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-people me-1"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-telephone me-1"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Professional Rendering Services</h1>
+            <p class="lead">Transform your property with our expert cement, acrylic, and concrete rendering services across Sydney</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Get Free Quote</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About ProRender Sydney</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="about-highlight">
+                        <div class="about-content">
+                            <h3 class="mb-3">
+                                <i class="bi bi-house-heart me-2" style="color: var(--secondary-color);"></i>
+                                ProRender is a small family business.
+                            </h3>
+                            <p>We Cover All Sydney And Metropolitan Areas. We Offer You Professional And Honest Advice. Our Team Is Reliable And Friendly And Your Satisfaction Is Our First Priority.</p>
+                            <p>Our Services Include: Cement Render, Granosite, Bagging, Acrylic. Rendering Will Add Value To Your Property Along With Improving The Appearance And Feel To Your Home.</p>
+                            <p>We Take Pride In Our Work And Keep In Mind That When The Job Is Complete It's Clean And Tidy To Your Satisfaction. Our prices are Affordable And Reasonable to fit within most budgets.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <p><i class="bi bi-building me-2" style="color: var(--secondary-color);"></i><strong>Business Name:</strong> ProRender Sydney</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><i class="bi bi-geo-alt-fill me-2" style="color: var(--secondary-color);"></i><strong>Location:</strong> Sydney, NSW</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="about-stats">
+                        <h4>10+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="about-stats">
+                        <h4>500+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="about-stats">
+                        <h4>100%</h4>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-brush"></i>
+                        </div>
+                        <h3>Texture & Granosite Coating</h3>
+                        <p>Does your building have some surface defects you wish to hide? Surface defects can make a structure appear less-than-professional. Our texture and granosite coating services provide the perfect solution to enhance your building's appearance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h3>Acrylic Rendering Sydney</h3>
+                        <p>Looking for rendering services in Sydney? Acrylic render is a great investment if you have a home with exterior walls that need protection and beautification. Our professional acrylic rendering delivers outstanding results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-bricks"></i>
+                        </div>
+                        <h3>Cement Rendering Sydney</h3>
+                        <p>Cement render is a massive, thick, and immovable covering over a building's substrate. It was first used in Europe hundreds of years ago and remains one of the most durable rendering solutions available today.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-hammer"></i>
+                        </div>
+                        <h3>Cement Rendering Repairs</h3>
+                        <p>ProRender tends to large and small cement rendering repairs. We offer affordable prices, professional work with years of experience. Trust us to restore your rendering to its original condition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h3>Concrete Rendering Sydney</h3>
+                        <p>If you're interested in adding a unique look to your brick or cement walls, concrete rendering from ProRender is a great choice. We specialize in creating stunning concrete finishes that stand the test of time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Works</h2>
+            <p class="text-center mb-5">We are a cement rendering business located in Campbelltown working in all Sydney regions. ProRender offers free quoting.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/250?random=1" alt="Cement Rendering Project" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/250?random=2" alt="Acrylic Rendering Project" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/250?random=3" alt="Texture Coating Project" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/250?random=4" alt="Concrete Rendering Project" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/250?random=5" alt="Granosite Coating Project" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/250?random=6" alt="Rendering Repair Project" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About ProRender Sydney</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="about-highlight">
+                        <div class="about-content">
+                            <h3 class="mb-3">ProRender is a small family business.</h3>
+                            <p>We Cover All Sydney And Metropolitan Areas. We Offer You Professional And Honest Advice. Our Team Is Reliable And Friendly And Your Satisfaction Is Our First Priority.</p>
+                            <p>Our Services Include: Cement Render, Granosite, Bagging, Acrylic. Rendering Will Add Value To Your Property Along With Improving The Appearance And Feel To Your Home.</p>
+                            <p>We Take Pride In Our Work And Keep In Mind That When The Job Is Complete It's Clean And Tidy To Your Satisfaction. Our prices are Affordable And Reasonable to fit within most budgets.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <p><strong>Business Name:</strong> ProRender Sydney</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Location:</strong> Sydney, NSW</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5><i class="bi bi-house-door me-2"></i>ProRender Sydney</h5>
+                    <p>Professional rendering services across Sydney and metropolitan areas. Quality work, affordable prices, and complete customer satisfaction guaranteed.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5><i class="bi bi-tools me-2"></i>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#services"><i class="bi bi-bricks me-2"></i>Cement Rendering</a></li>
+                        <li><a href="#services"><i class="bi bi-palette me-2"></i>Acrylic Rendering</a></li>
+                        <li><a href="#services"><i class="bi bi-building me-2"></i>Concrete Rendering</a></li>
+                        <li><a href="#services"><i class="bi bi-brush me-2"></i>Texture Coating</a></li>
+                        <li><a href="#services"><i class="bi bi-hammer me-2"></i>Rendering Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home"><i class="bi bi-house me-2"></i>Home</a></li>
+                        <li><a href="#services"><i class="bi bi-tools me-2"></i>Services</a></li>
+                        <li><a href="#gallery"><i class="bi bi-images me-2"></i>Our Works</a></li>
+                        <li><a href="#about"><i class="bi bi-people me-2"></i>About Us</a></li>
+                        <li><a href="#contact"><i class="bi bi-telephone me-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5><i class="bi bi-telephone me-2"></i>Contact Info</h5>
+                    <p><i class="bi bi-telephone-fill me-2"></i>(02) 9876 5432</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i>Campbelltown, Sydney NSW</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i>info@prorendersydney.com.au</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProRender Sydney. All rights reserved. Professional rendering services across Sydney.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
