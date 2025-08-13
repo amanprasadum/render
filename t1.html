@@ -1335,21 +1335,9 @@
     <!-- Custom JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize carousel with proper configuration
+            // Initialize carousel
             const carouselElement = document.querySelector('#heroCarousel');
             if (carouselElement) {
-                // Ensure first slide is properly set as active
-                const firstSlide = carouselElement.querySelector('.carousel-item:first-child');
-                const firstContent = firstSlide.querySelector('.hero-content');
-
-                if (firstSlide) {
-                    firstSlide.classList.add('active');
-                    if (firstContent) {
-                        firstContent.style.opacity = '1';
-                        firstContent.style.transform = 'translateY(0)';
-                    }
-                }
-
                 const carousel = new bootstrap.Carousel(carouselElement, {
                     interval: 5000,
                     ride: 'carousel',
@@ -1359,10 +1347,9 @@
                     touch: true
                 });
 
-                // Handle carousel slide events with proper timing
+                // Handle content animation on slide change
                 carouselElement.addEventListener('slide.bs.carousel', function (event) {
                     const nextContent = event.relatedTarget.querySelector('.hero-content');
-
                     if (nextContent) {
                         nextContent.style.opacity = '0';
                         nextContent.style.transform = 'translateY(30px)';
@@ -1371,12 +1358,9 @@
 
                 carouselElement.addEventListener('slid.bs.carousel', function (event) {
                     const activeContent = event.target.querySelector('.carousel-item.active .hero-content');
-
                     if (activeContent) {
-                        setTimeout(() => {
-                            activeContent.style.opacity = '1';
-                            activeContent.style.transform = 'translateY(0)';
-                        }, 100);
+                        activeContent.style.opacity = '1';
+                        activeContent.style.transform = 'translateY(0)';
                     }
                 });
             }
