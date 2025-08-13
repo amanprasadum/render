@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,7 @@
         .middle-bar {
             background: var(--white);
             padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
@@ -126,13 +127,13 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero-content p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .btn-hero {
@@ -160,7 +161,7 @@
 
         .btn-hero:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* SECTIONS */
@@ -187,6 +188,35 @@
             margin: 0 auto;
         }
 
+        .carousel-item {
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        }
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: flex !important;
+        }
+
+        .carousel-indicators {
+            bottom: 20px;
+        }
+
+        .carousel-indicators button {
+            background-color: var(--white);
+            opacity: 0.5;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators .active {
+            opacity: 1;
+            background-color: var(--secondary-color);
+        }
+
         /* SERVICES */
         .service-card {
             background: var(--white);
@@ -194,13 +224,13 @@
             padding: 2rem;
             height: 100%;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .service-icon {
@@ -260,7 +290,7 @@
             background: var(--white);
             border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
             height: 100%;
         }
@@ -304,18 +334,19 @@
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-            
+
             .contact-info {
                 flex-direction: column;
                 gap: 10px;
             }
-            
+
             .btn-hero {
                 margin: 5px 0;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- TOP BAR -->
     <div class="top-bar">
@@ -400,15 +431,22 @@
     <!-- HERO SECTION -->
     <section id="home" class="hero-section">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
             <div class="carousel-inner">
-                <!-- Slide 1 -->
                 <div class="carousel-item active hero-slide">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="hero-content">
                                     <h1>Transform Your Property with Sydney's Leading Rendering Experts</h1>
-                                    <p>At DM Render, we bring walls to life with flawless finishes and long-lasting protection. Whether it's a modern home or a commercial facade, we deliver rendering solutions that elevate your space.</p>
+                                    <p>At DM Render, we bring walls to life with flawless finishes and long-lasting
+                                        protection. Whether it's a modern home or a commercial facade, we deliver
+                                        rendering solutions that elevate your space.</p>
                                     <div class="hero-buttons">
                                         <a href="#contact" class="btn-hero btn-primary-hero">Get a Free Quote</a>
                                         <a href="#gallery" class="btn-hero btn-secondary-hero">View Our Work</a>
@@ -418,33 +456,34 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
                 <div class="carousel-item hero-slide slide-2">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="hero-content">
                                     <h1>Bring Beauty and Strength to Your Walls</h1>
-                                    <p>At DM Render, we treat every project like a canvas—creating smooth, resilient finishes that enhance your property's charm and value. Let's build something beautiful together.</p>
+                                    <p>At DM Render, we treat every project like a canvas—creating smooth, resilient
+                                        finishes that enhance your property's charm and value. Let's build something
+                                        beautiful together.</p>
                                     <div class="hero-buttons">
                                         <a href="#contact" class="btn-hero btn-primary-hero">Get Your Free Quote</a>
-                                        <a href="#gallery" class="btn-hero btn-secondary-hero">Browse Our Recent Projects</a>
+                                        <a href="#gallery" class="btn-hero btn-secondary-hero">Browse Our Recent
+                                            Projects</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 3 -->
                 <div class="carousel-item hero-slide slide-3">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="hero-content">
                                     <h1>Precision Rendering Backed by Experience</h1>
-                                    <p>With years of industry expertise, DM Render delivers flawless finishes using premium materials and proven techniques. We're the go-to team for reliable, high-quality rendering in Sydney.</p>
+                                    <p>With years of industry expertise, DM Render delivers flawless finishes using
+                                        premium materials and proven techniques. We're the go-to team for reliable,
+                                        high-quality rendering in Sydney.</p>
                                     <div class="hero-buttons">
                                         <a href="#contact" class="btn-hero btn-primary-hero">Request a Free Estimate</a>
                                         <a href="#gallery" class="btn-hero btn-secondary-hero">View Case Studies</a>
@@ -455,12 +494,13 @@
                     </div>
                 </div>
             </div>
-
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
     </section>
@@ -470,19 +510,25 @@
         <div class="container">
             <div class="section-title">
                 <h2>Professional Rendering Services for Homes & Businesses Across Sydney</h2>
-                <p>Welcome to DM Render, one of trusted companies for high-quality rendering services in Sydney. With years of experience and a passion for flawless finishes, we transform ordinary walls into stunning surfaces that stand the test of time.</p>
+                <p>Welcome to DM Render, one of trusted companies for high-quality rendering services in Sydney. With
+                    years of experience and a passion for flawless finishes, we transform ordinary walls into stunning
+                    surfaces that stand the test of time.</p>
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body">
                             <h4 class="mb-3">Why DM Render is Sydney's Trusted Rendering Company</h4>
-                            <p>With over a decade of experience, DM Render has become a go-to name among rendering companies in Sydney. Our team of skilled professionals is passionate about delivering high-quality finishes that combine style, durability, and precision.</p>
+                            <p>With over a decade of experience, DM Render has become a go-to name among rendering
+                                companies in Sydney. Our team of skilled professionals is passionate about delivering
+                                high-quality finishes that combine style, durability, and precision.</p>
                             <ul class="list-unstyled">
                                 <li><i class="fas fa-check text-success me-2"></i>Locally owned and operated</li>
                                 <li><i class="fas fa-check text-success me-2"></i>Fully licensed and insured</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Experts in both residential and commercial rendering</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Committed to clean, timely, and professional service</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Experts in both residential and
+                                    commercial rendering</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Committed to clean, timely, and
+                                    professional service</li>
                             </ul>
                         </div>
                     </div>
@@ -492,13 +538,18 @@
                         <div class="card-body">
                             <h4 class="mb-3">What Sets DM Render Apart</h4>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-star text-warning me-2"></i>Competitive pricing with transparent quotes</li>
-                                <li><i class="fas fa-star text-warning me-2"></i>Premium materials and expert craftsmanship</li>
-                                <li><i class="fas fa-star text-warning me-2"></i>Fast turnaround with minimal disruption</li>
+                                <li><i class="fas fa-star text-warning me-2"></i>Competitive pricing with transparent
+                                    quotes</li>
+                                <li><i class="fas fa-star text-warning me-2"></i>Premium materials and expert
+                                    craftsmanship</li>
+                                <li><i class="fas fa-star text-warning me-2"></i>Fast turnaround with minimal disruption
+                                </li>
                                 <li><i class="fas fa-star text-warning me-2"></i>100% satisfaction guarantee</li>
-                                <li><i class="fas fa-star text-warning me-2"></i>Friendly, professional team that treats your property with care</li>
+                                <li><i class="fas fa-star text-warning me-2"></i>Friendly, professional team that treats
+                                    your property with care</li>
                             </ul>
-                            <p class="mt-3"><em>We're not just another rendering company—we're your rendering partner. Each project reflects our commitment to quality and detail.</em></p>
+                            <p class="mt-3"><em>We're not just another rendering company—we're your rendering partner.
+                                    Each project reflects our commitment to quality and detail.</em></p>
                         </div>
                     </div>
                 </div>
@@ -517,13 +568,16 @@
             <!-- Service Tabs -->
             <ul class="nav nav-tabs justify-content-center mb-5" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#residential" type="button">Residential</button>
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#residential"
+                        type="button">Residential</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#commercial" type="button">Commercial</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#commercial"
+                        type="button">Commercial</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#process" type="button">Our Process</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#process" type="button">Our
+                        Process</button>
                 </li>
             </ul>
 
@@ -537,7 +591,9 @@
                                     <i class="fas fa-paint-roller"></i>
                                 </div>
                                 <h4>Acrylic Rendering</h4>
-                                <p>Acrylic render offers a flexible, crack-resistant finish that's perfect for modern homes and commercial buildings. It's available in a wide range of colours and textures.</p>
+                                <p>Acrylic render offers a flexible, crack-resistant finish that's perfect for modern
+                                    homes and commercial buildings. It's available in a wide range of colours and
+                                    textures.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
@@ -546,7 +602,8 @@
                                     <i class="fas fa-hammer"></i>
                                 </div>
                                 <h4>Cement Rendering</h4>
-                                <p>Traditional and tough, cement render provides a solid base with options for smooth or textured finishes. Great for exterior walls and fences.</p>
+                                <p>Traditional and tough, cement render provides a solid base with options for smooth or
+                                    textured finishes. Great for exterior walls and fences.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
@@ -555,7 +612,8 @@
                                     <i class="fas fa-leaf"></i>
                                 </div>
                                 <h4>Lime Rendering</h4>
-                                <p>Breathable and eco-friendly, lime render is ideal for older or heritage properties. It allows moisture to escape, preventing long-term damage.</p>
+                                <p>Breathable and eco-friendly, lime render is ideal for older or heritage properties.
+                                    It allows moisture to escape, preventing long-term damage.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
@@ -564,7 +622,8 @@
                                     <i class="fas fa-texture"></i>
                                 </div>
                                 <h4>Texture Coating</h4>
-                                <p>Add visual interest with texture coatings that mimic stone, sand, or custom patterns. Perfect for feature walls and facades.</p>
+                                <p>Add visual interest with texture coatings that mimic stone, sand, or custom patterns.
+                                    Perfect for feature walls and facades.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
@@ -573,7 +632,8 @@
                                     <i class="fas fa-gem"></i>
                                 </div>
                                 <h4>Polished Concrete</h4>
-                                <p>A sleek, modern surface that's easy to maintain and perfect for floors, benchtops, and commercial spaces.</p>
+                                <p>A sleek, modern surface that's easy to maintain and perfect for floors, benchtops,
+                                    and commercial spaces.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
@@ -582,7 +642,8 @@
                                     <i class="fas fa-tools"></i>
                                 </div>
                                 <h4>Remedial Work & Repairs</h4>
-                                <p>Cracks, flaking, or water damage? We restore your surfaces with expert techniques and long-lasting results.</p>
+                                <p>Cracks, flaking, or water damage? We restore your surfaces with expert techniques and
+                                    long-lasting results.</p>
                             </div>
                         </div>
                     </div>
@@ -593,13 +654,19 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 mb-4">
                             <h3>Modernise Your Commercial Space with Sydney's Top Rendering Team</h3>
-                            <p>For top-tier commercial rendering services for Sydney's businesses, trust DM Render to deliver precision finishes that stand the test of time. Whether it's an office, retail space, or apartment complex, we deliver clean, durable finishes that enhance your property's value and appeal.</p>
+                            <p>For top-tier commercial rendering services for Sydney's businesses, trust DM Render to
+                                deliver precision finishes that stand the test of time. Whether it's an office, retail
+                                space, or apartment complex, we deliver clean, durable finishes that enhance your
+                                property's value and appeal.</p>
                             <p>Our team works efficiently to meet deadlines and maintain site cleanliness.</p>
                         </div>
                         <div class="col-lg-6 mb-4">
                             <h3>Sydney House Rendering Services – Built to Last, Designed to Impress</h3>
-                            <p>Upgrade Your Home with Style and Protection – DM Render Offers Expert House Rendering Services in Sydney That Deliver Lasting Impact.</p>
-                            <p>We help Sydney homeowners choose the right render for their property—whether it's cement, acrylic, or textured. Our finishes improve curb appeal and protect against weather damage.</p>
+                            <p>Upgrade Your Home with Style and Protection – DM Render Offers Expert House Rendering
+                                Services in Sydney That Deliver Lasting Impact.</p>
+                            <p>We help Sydney homeowners choose the right render for their property—whether it's cement,
+                                acrylic, or textured. Our finishes improve curb appeal and protect against weather
+                                damage.</p>
                         </div>
                     </div>
                 </div>
@@ -611,35 +678,45 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-6 mb-4 text-center">
                             <div class="process-step">
-                                <div class="step-icon mx-auto mb-3" style="width: 80px; height: 80px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">1</div>
+                                <div class="step-icon mx-auto mb-3"
+                                    style="width: 80px; height: 80px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">
+                                    1</div>
                                 <h5>Free Quote & Consultation</h5>
                                 <p>We assess your property and provide a clear quote.</p>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6 mb-4 text-center">
                             <div class="process-step">
-                                <div class="step-icon mx-auto mb-3" style="width: 80px; height: 80px; background: var(--accent-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">2</div>
+                                <div class="step-icon mx-auto mb-3"
+                                    style="width: 80px; height: 80px; background: var(--accent-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">
+                                    2</div>
                                 <h5>Design & Planning</h5>
                                 <p>Choose your render type, texture, and finish.</p>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6 mb-4 text-center">
                             <div class="process-step">
-                                <div class="step-icon mx-auto mb-3" style="width: 80px; height: 80px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">3</div>
+                                <div class="step-icon mx-auto mb-3"
+                                    style="width: 80px; height: 80px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">
+                                    3</div>
                                 <h5>Surface Preparation</h5>
                                 <p>We clean and prep the walls for perfect adhesion.</p>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6 mb-4 text-center">
                             <div class="process-step">
-                                <div class="step-icon mx-auto mb-3" style="width: 80px; height: 80px; background: var(--dark-gray); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">4</div>
+                                <div class="step-icon mx-auto mb-3"
+                                    style="width: 80px; height: 80px; background: var(--dark-gray); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">
+                                    4</div>
                                 <h5>Application</h5>
                                 <p>Our skilled team applies the render with precision.</p>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-4 col-6 mb-4 text-center">
                             <div class="process-step">
-                                <div class="step-icon mx-auto mb-3" style="width: 80px; height: 80px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">5</div>
+                                <div class="step-icon mx-auto mb-3"
+                                    style="width: 80px; height: 80px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">
+                                    5</div>
                                 <h5>Final Touches</h5>
                                 <p>We inspect and clean up, leaving your space flawless.</p>
                             </div>
@@ -660,7 +737,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item">
-                        <img src="https://picsum.photos/400/300?random=10" alt="Before & after transformations" class="img-fluid">
+                        <img src="https://picsum.photos/400/300?random=10" alt="Before & after transformations"
+                            class="img-fluid">
                         <div class="gallery-overlay">
                             <div class="text-center">
                                 <h5>Residential Homes</h5>
@@ -715,7 +793,9 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="#gallery" class="btn btn-lg" style="background: var(--secondary-color); color: var(--white); border-radius: 50px; padding: 12px 40px; text-decoration: none;">View More Work</a>
+                <a href="#gallery" class="btn btn-lg"
+                    style="background: var(--secondary-color); color: var(--white); border-radius: 50px; padding: 12px 40px; text-decoration: none;">View
+                    More Work</a>
             </div>
         </div>
     </section>
@@ -731,7 +811,8 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-text">
-                            "DM Render did an amazing job on our home. The acrylic finish looks fantastic and the team was so professional!"
+                            "DM Render did an amazing job on our home. The acrylic finish looks fantastic and the team
+                            was so professional!"
                         </div>
                         <div class="testimonial-author">— Emily Saunders, Parramatta</div>
                     </div>
@@ -739,7 +820,8 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-text">
-                            "We hired DM Render for our commercial building and couldn't be happier. Fast, clean, and reliable."
+                            "We hired DM Render for our commercial building and couldn't be happier. Fast, clean, and
+                            reliable."
                         </div>
                         <div class="testimonial-author">— James Thompson, Sydney CBD</div>
                     </div>
@@ -747,7 +829,8 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-text">
-                            "Highly recommend! Great communication, fair pricing, and the lime render gave our heritage home a beautiful finish."
+                            "Highly recommend! Great communication, fair pricing, and the lime render gave our heritage
+                            home a beautiful finish."
                         </div>
                         <div class="testimonial-author">— Sarah Mitchell, Balmain</div>
                     </div>
@@ -834,7 +917,8 @@
                             <div class="contact-details">
                                 <div class="contact-detail mb-4">
                                     <div class="d-flex align-items-center">
-                                        <div class="contact-icon me-3" style="width: 50px; height: 50px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <div class="contact-icon me-3"
+                                            style="width: 50px; height: 50px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                             <i class="fas fa-phone"></i>
                                         </div>
                                         <div>
@@ -845,18 +929,21 @@
                                 </div>
                                 <div class="contact-detail mb-4">
                                     <div class="d-flex align-items-center">
-                                        <div class="contact-icon me-3" style="width: 50px; height: 50px; background: var(--accent-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <div class="contact-icon me-3"
+                                            style="width: 50px; height: 50px; background: var(--accent-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                             <i class="fas fa-envelope"></i>
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Email Us</h6>
-                                            <a href="mailto:info@dmrender.com.au" class="text-decoration-none">info@dmrender.com.au</a>
+                                            <a href="mailto:info@dmrender.com.au"
+                                                class="text-decoration-none">info@dmrender.com.au</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="contact-detail mb-4">
                                     <div class="d-flex align-items-center">
-                                        <div class="contact-icon me-3" style="width: 50px; height: 50px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <div class="contact-icon me-3"
+                                            style="width: 50px; height: 50px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <div>
@@ -873,11 +960,15 @@
                     <div class="card border-0 shadow-lg h-100">
                         <div class="card-body p-5">
                             <h4 class="mb-4">DM Render – One of the Top Rendering Companies in Sydney</h4>
-                            <p>Looking for a reliable Sydney rendering expert? DM Render is one of local offers professional rendering services that enhance your property's value and appeal.</p>
-                            <p>As one of the top rendering companies in Sydney, we're proud to deliver quality finishes at affordable prices.</p>
+                            <p>Looking for a reliable Sydney rendering expert? DM Render is one of local offers
+                                professional rendering services that enhance your property's value and appeal.</p>
+                            <p>As one of the top rendering companies in Sydney, we're proud to deliver quality finishes
+                                at affordable prices.</p>
                             <p class="fw-bold">Contact us today for a free quote and expert advice.</p>
                             <div class="mt-4">
-                                <a href="#contact" class="btn btn-lg" style="background: var(--secondary-color); color: var(--white); border-radius: 50px; padding: 12px 40px; text-decoration: none;">Get Your Free Quote Now</a>
+                                <a href="#contact" class="btn btn-lg"
+                                    style="background: var(--secondary-color); color: var(--white); border-radius: 50px; padding: 12px 40px; text-decoration: none;">Get
+                                    Your Free Quote Now</a>
                             </div>
                         </div>
                     </div>
@@ -892,7 +983,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <h5>DM Render</h5>
-                    <p>We don't just render walls—we build lasting impressions. From cement and acrylic to lime and silicone rendering, we offer a wide range of finishes to suit every style and budget.</p>
+                    <p>We don't just render walls—we build lasting impressions. From cement and acrylic to lime and
+                        silicone rendering, we offer a wide range of finishes to suit every style and budget.</p>
                     <div class="social-icons mt-3">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -926,7 +1018,8 @@
                     <h5>Contact Info</h5>
                     <div class="contact-footer">
                         <p><i class="fas fa-phone me-2"></i><a href="tel:0423902926">0423 902 926</a></p>
-                        <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@dmrender.com.au">info@dmrender.com.au</a></p>
+                        <p><i class="fas fa-envelope me-2"></i><a
+                                href="mailto:info@dmrender.com.au">info@dmrender.com.au</a></p>
                         <p><i class="fas fa-map-marker-alt me-2"></i>Sydney, NSW</p>
                         <p><i class="fas fa-clock me-2"></i>MON - SAT: 7:00 - 17:00</p>
                     </div>
@@ -935,7 +1028,8 @@
             <hr class="my-4" style="border-color: rgba(255,255,255,0.2);">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>&copy; 2025 DM Render. Our commitment to craftsmanship, punctuality, and customer satisfaction makes us one of Sydney's top rendering companies.</p>
+                    <p>&copy; 2025 DM Render. Our commitment to craftsmanship, punctuality, and customer satisfaction
+                        makes us one of Sydney's top rendering companies.</p>
                 </div>
             </div>
         </div>
@@ -961,10 +1055,10 @@
         });
 
         // Active navigation highlighting
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 100;
@@ -980,6 +1074,59 @@
                 }
             });
         });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize carousel
+            const carousel = document.querySelector('#heroCarousel');
+            if (carousel) {
+                new bootstrap.Carousel(carousel, {
+                    interval: 5000,
+                    ride: 'carousel'
+                });
+            }
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', function () {
+                try {
+                    const sections = document.querySelectorAll('section[id]');
+                    const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+
+                    let current = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - 100;
+                        if (window.scrollY >= sectionTop) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error in scroll event listener:', error);
+                }
+            });
+        });
     </script>
 </body>
+
 </html>
