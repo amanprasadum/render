@@ -1300,28 +1300,46 @@
             // Initialize carousel with proper configuration
             const carouselElement = document.querySelector('#heroCarousel');
             if (carouselElement) {
+                // Ensure first slide is properly set as active
+                const firstSlide = carouselElement.querySelector('.carousel-item:first-child');
+                const firstContent = firstSlide.querySelector('.hero-content');
+
+                if (firstSlide) {
+                    firstSlide.classList.add('active');
+                    if (firstContent) {
+                        firstContent.style.opacity = '1';
+                        firstContent.style.transform = 'translateY(0)';
+                    }
+                }
+
                 const carousel = new bootstrap.Carousel(carouselElement, {
                     interval: 5000,
                     ride: 'carousel',
                     pause: 'hover',
                     wrap: true,
-                    keyboard: true
+                    keyboard: true,
+                    touch: true
                 });
 
-                // Handle carousel slide transitions
+                // Handle carousel slide events with proper timing
                 carouselElement.addEventListener('slide.bs.carousel', function (event) {
-                    const activeItem = event.target.querySelector('.carousel-item.active .hero-content');
-                    const nextItem = event.relatedTarget.querySelector('.hero-content');
+                    const nextContent = event.relatedTarget.querySelector('.hero-content');
 
-                    if (activeItem) {
-                        activeItem.style.animation = 'none';
+                    if (nextContent) {
+                        nextContent.style.opacity = '0';
+                        nextContent.style.transform = 'translateY(30px)';
                     }
+                });
 
-                    setTimeout(() => {
-                        if (nextItem) {
-                            nextItem.style.animation = 'fadeInUp 0.8s ease-out';
-                        }
-                    }, 100);
+                carouselElement.addEventListener('slid.bs.carousel', function (event) {
+                    const activeContent = event.target.querySelector('.carousel-item.active .hero-content');
+
+                    if (activeContent) {
+                        setTimeout(() => {
+                            activeContent.style.opacity = '1';
+                            activeContent.style.transform = 'translateY(0)';
+                        }, 100);
+                    }
                 });
             }
 
