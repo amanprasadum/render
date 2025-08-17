@@ -8,7 +8,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1C2526;
+/*             --primary-color: #1C2526; */
+            --primary-color: #18236f;
             /* Midnight blue for main elements */
             --secondary-color: #FFB300;
             /* Golden yellow for accents and CTAs */
@@ -309,12 +310,19 @@
             left: 0;
         }
 
-        .nav-tabs .nav-link.active {
+/*         .nav-tabs .nav-link.active {
             background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
             color: var(--white);
             box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
             transform: translateY(-2px);
+        } */
+        .nav-tabs .nav-link.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(24, 35, 111, 0.3); /* thoda bluish shadow */
+            transform: translateY(-2px);
         }
+
 
         .nav-tabs .nav-link.active::before {
             left: 0;
