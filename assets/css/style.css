@@ -28,7 +28,7 @@
 
         .navbar-layer-2 .navbar-brand,
         .navbar-layer-2 .text-white {
-            color: var(--primary-color) !important;
+            color: #fff !important;
         }
 
         .navbar-layer-3 {
