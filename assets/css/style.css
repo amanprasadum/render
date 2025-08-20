@@ -1,7 +1,9 @@
         /* Custom CSS */
         :root {
-            --primary-color: #2b3a55;
-            --secondary-color: #ffd700;
+            /* --primary-color: #2b3a55;
+            --secondary-color: #ffd700; */
+            --primary-color: #0c1115;
+            --secondary-color: #f89406;
             --accent-color: #2b3a55;
             --light-bg: #f8f9fa;
             --soft-gray: #f7f8fc;
