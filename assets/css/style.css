@@ -1,4 +1,4 @@
-/* Modern Three-Layer Navbar - Clean Design */
+/* Modern Three-Layer Navbar - Bootstrap Responsive */
 :root {
     --primary-color: #0c1115;
     --secondary-color: #f89406;
@@ -43,19 +43,8 @@ body {
     border-bottom: 1px solid var(--border-light);
 }
 
-.logo-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-
-.logo-container {
-    text-align: center;
-}
-
 .logo-container img {
-    width: 220px;
+    max-width: 220px;
     height: auto;
     transition: opacity 0.3s ease;
 }
@@ -64,17 +53,7 @@ body {
     opacity: 0.9;
 }
 
-.business-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    min-width: 280px;
-}
-
 .info-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     color: var(--primary-color);
     font-size: 0.95rem;
     font-weight: 500;
@@ -85,16 +64,9 @@ body {
     height: 40px;
     background-color: var(--secondary-color);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     font-size: 1rem;
     flex-shrink: 0;
-}
-
-.info-text {
-    flex: 1;
 }
 
 .info-text .label {
@@ -120,14 +92,9 @@ body {
     z-index: 1020;
 }
 
-.navbar-layer-3 .container {
-    padding: 0;
-}
-
 .navbar-layer-3 .navbar-toggler {
     border: none;
     background: rgba(255, 255, 255, 0.2);
-    margin: 10px 15px;
     padding: 8px 12px;
     border-radius: 6px;
 }
@@ -140,21 +107,7 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.main-nav {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.main-nav .nav-item {
-    margin: 0;
-}
-
-.main-nav .nav-link {
-    display: block;
-    padding: 18px 24px;
+.navbar-layer-3 .nav-link {
     color: white !important;
     font-weight: 600;
     font-size: 0.95rem;
@@ -162,52 +115,40 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    padding: 18px 24px !important;
     border-bottom: 3px solid transparent;
 }
 
-.main-nav .nav-link:hover {
+.navbar-layer-3 .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-bottom-color: white;
     transform: translateY(-1px);
 }
 
-/* Mobile Styles */
+/* Mobile Navigation Adjustments */
 @media (max-width: 991px) {
-    .navbar-layer-2 {
-        padding: 20px 0;
+    .navbar-layer-3 .navbar-collapse {
+        background-color: var(--secondary-color);
+        margin-top: 0;
     }
     
-    .logo-section {
-        flex-direction: column;
-        gap: 25px;
-        text-align: center;
+    .navbar-layer-3 .nav-link {
+        padding: 12px 20px !important;
+        border-bottom: none !important;
+        border-left: 3px solid transparent;
     }
     
-    .business-info {
-        min-width: auto;
-        align-items: center;
-    }
-    
-    .info-item {
-        justify-content: center;
-        max-width: 300px;
-    }
-    
-    .logo-container img {
-        width: 180px;
+    .navbar-layer-3 .nav-link:hover {
+        border-left-color: white;
+        border-bottom-color: transparent !important;
+        transform: none;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .navbar-layer-1 {
         font-size: 0.8rem;
         padding: 6px 0;
-    }
-    
-    .contact-item {
-        display: block;
-        text-align: center;
-        margin-bottom: 4px;
     }
     
     .navbar-layer-2 {
@@ -215,11 +156,7 @@ body {
     }
     
     .logo-container img {
-        width: 160px;
-    }
-    
-    .info-item {
-        font-size: 0.9rem;
+        max-width: 160px;
     }
     
     .info-icon {
@@ -228,22 +165,11 @@ body {
         font-size: 0.9rem;
     }
     
-    .navbar-layer-3 .navbar-collapse {
-        background-color: var(--secondary-color);
-        margin-top: 0;
-    }
-    
-    .main-nav .nav-link {
-        padding: 12px 20px;
-        border-bottom: none;
-        border-left: 3px solid transparent;
-    }
-    
-    .main-nav .nav-link:hover {
-        border-left-color: white;
-        border-bottom-color: transparent;
+    .info-item {
+        font-size: 0.9rem;
     }
 }
+
 /* Hero Carousel */
 .hero-carousel {
     height: 100vh;
