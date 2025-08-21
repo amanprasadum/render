@@ -1,4 +1,4 @@
-/* Modern Three-Layer Navbar - Bootstrap Responsive */
+/* Modern Three-Layer Navbar - Fixed Version */
 :root {
     --primary-color: #0c1115;
     --secondary-color: #f89406;
@@ -39,12 +39,24 @@ body {
 /* Layer 2 - Logo & Info Section */
 .navbar-layer-2 {
     background-color: #ffffff;
-    padding: 25px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--border-light);
 }
 
+.brand-info-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    padding-right: 30px;
+    border-right: 3px solid var(--secondary-color);
+}
+
 .logo-container img {
-    max-width: 220px;
+    width: 200px;
     height: auto;
     transition: opacity 0.3s ease;
 }
@@ -53,7 +65,16 @@ body {
     opacity: 0.9;
 }
 
+.business-info {
+    flex: 1;
+    display: flex;
+    gap: 25px;
+}
+
 .info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--primary-color);
     font-size: 0.95rem;
     font-weight: 500;
@@ -64,6 +85,9 @@ body {
     height: 40px;
     background-color: var(--secondary-color);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-size: 1rem;
     flex-shrink: 0;
@@ -87,9 +111,6 @@ body {
     background-color: var(--secondary-color);
     padding: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1020;
 }
 
 .navbar-layer-3 .navbar-toggler {
@@ -116,36 +137,78 @@ body {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     padding: 18px 24px !important;
-    border-bottom: 3px solid transparent;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.navbar-layer-3 .nav-item:last-child .nav-link {
+    border-right: none;
 }
 
 .navbar-layer-3 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-bottom-color: white;
-    transform: translateY(-1px);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-right-color: white;
+    transform: translateY(-2px);
 }
 
-/* Mobile Navigation Adjustments */
+.navbar-layer-3 .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-layer-3 .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Styles */
 @media (max-width: 991px) {
+    .brand-info-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        border-right: none;
+        border-bottom: 3px solid var(--secondary-color);
+        padding-right: 0;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    
+    .business-info {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
     .navbar-layer-3 .navbar-collapse {
         background-color: var(--secondary-color);
-        margin-top: 0;
     }
     
     .navbar-layer-3 .nav-link {
         padding: 12px 20px !important;
-        border-bottom: none !important;
-        border-left: 3px solid transparent;
+        border-right: none !important;
+        border-left: 3px solid rgba(255, 255, 255, 0.2);
     }
     
     .navbar-layer-3 .nav-link:hover {
         border-left-color: white;
-        border-bottom-color: transparent !important;
         transform: none;
+    }
+    
+    .navbar-layer-3 .nav-link::after {
+        display: none;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .navbar-layer-1 {
         font-size: 0.8rem;
         padding: 6px 0;
@@ -156,7 +219,16 @@ body {
     }
     
     .logo-container img {
-        max-width: 160px;
+        width: 160px;
+    }
+    
+    .business-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .info-item {
+        justify-content: center;
     }
     
     .info-icon {
@@ -169,7 +241,7 @@ body {
         font-size: 0.9rem;
     }
 }
- 
+
 /* Hero Carousel */
 .hero-carousel {
     height: 100vh;
