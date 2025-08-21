@@ -64,7 +64,7 @@ body {
     color: var(--primary-color);
     font-size: 0.95rem;
     font-weight: 500;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .info-icon {
