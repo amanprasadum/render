@@ -7,6 +7,9 @@
     --text-light: #6c757d;
     --border-light: #e9ecef;
 }
+.text-orange {
+    color: var(--secondary-color) !important;
+}
 
 html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
