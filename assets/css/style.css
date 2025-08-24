@@ -8,9 +8,11 @@
     --border-light: #e9ecef;
 }
 
-body {
+html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+    
 }
 
 
