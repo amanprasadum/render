@@ -52,7 +52,7 @@
 /* Layer 2 - Logo & Info Section */
 .navbar-layer-2 {
     background-color: #ffffff;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     border-bottom: 1px solid var(--border-light);
 }
 
