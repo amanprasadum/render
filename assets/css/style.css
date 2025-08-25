@@ -7,15 +7,17 @@
     --text-light: #6c757d;
     --border-light: #e9ecef;
 }
+
 .text-orange {
     color: var(--secondary-color) !important;
 }
 
-html, body {
+html,
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    
+
 }
 
 
@@ -164,10 +166,15 @@ html, body {
 }
 
 .section-title {
+    /* color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center; */
     color: var(--primary-color);
     font-weight: bold;
     margin-bottom: 3rem;
     text-align: center;
+    position: relative;
 }
 
 .content-section {
@@ -261,6 +268,7 @@ html, body {
 li.nav-item {
     border-right: 3px solid #f89406;
 }
+
 /* About Us Section Styles */
 .aboutus-content-section {
     padding: 80px 0;
@@ -273,6 +281,17 @@ li.nav-item {
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
+}
+
+section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
 }
 
 .aboutus-section-title::after {
@@ -290,7 +309,7 @@ li.nav-item {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
@@ -331,7 +350,7 @@ li.nav-item {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .aboutus-location-item {
@@ -356,7 +375,7 @@ li.nav-item {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     height: 100%;
 }
 
