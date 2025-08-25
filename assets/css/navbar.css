@@ -57,7 +57,7 @@
 }
 
 .navbar-layer-2 .container-fluid {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -72,7 +72,7 @@
 
 .logo-container img {
     width: 180px;
-    height: auto;
+    height: 150px;
     transition: opacity 0.3s ease;
     max-width: 100%;
     object-fit: contain;
